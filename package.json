@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "convert:pbp": "node scripts/convert-playbyplay.mjs",
+    "convert:test": "node scripts/convert-playbyplay.mjs app/info/test.csv app/info/test.compiled.csv"
   },
   "dependencies": {
     "react": "19.1.0",

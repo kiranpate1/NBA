@@ -24,7 +24,7 @@ export default function Game1_OKC() {
             transform="translate(-44, -6)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
           <text
             transform="translate(-80, 0)"
@@ -37,7 +37,7 @@ export default function Game1_OKC() {
             transform="translate(-130, -6)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
       </g> */}
@@ -242,7 +242,7 @@ export default function Game1_OKC() {
             transform="translate(252, 138)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -251,7 +251,7 @@ export default function Game1_OKC() {
             transform="translate(185, 81)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -260,7 +260,7 @@ export default function Game1_OKC() {
             transform="translate(478, 71)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -271,7 +271,7 @@ export default function Game1_OKC() {
             transform="translate(363, 275)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -283,7 +283,7 @@ export default function Game1_OKC() {
             transform="translate(251, 297)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -292,7 +292,7 @@ export default function Game1_OKC() {
             transform="translate(294, 295)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -301,7 +301,7 @@ export default function Game1_OKC() {
             transform="translate(315, 58.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -312,7 +312,7 @@ export default function Game1_OKC() {
             transform="translate(246.00000000000003, 67)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -321,7 +321,7 @@ export default function Game1_OKC() {
             transform="translate(261, 46.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -332,7 +332,7 @@ export default function Game1_OKC() {
             transform="translate(331, 180)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -341,7 +341,7 @@ export default function Game1_OKC() {
             transform="translate(379, 86)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -350,7 +350,7 @@ export default function Game1_OKC() {
             transform="translate(50, 193.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -362,7 +362,7 @@ export default function Game1_OKC() {
             transform="translate(16.999999999999993, 19.000000000000004)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -371,7 +371,7 @@ export default function Game1_OKC() {
             transform="translate(97.00000000000001, 250)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -383,7 +383,7 @@ export default function Game1_OKC() {
             transform="translate(260, 35)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -392,7 +392,7 @@ export default function Game1_OKC() {
             transform="translate(283, 179)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -403,7 +403,7 @@ export default function Game1_OKC() {
             transform="translate(210, 84)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -414,7 +414,7 @@ export default function Game1_OKC() {
             transform="translate(255, 45)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -423,7 +423,7 @@ export default function Game1_OKC() {
             transform="translate(260, 46.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -432,7 +432,7 @@ export default function Game1_OKC() {
             transform="translate(266, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -441,7 +441,7 @@ export default function Game1_OKC() {
             transform="translate(147, 289)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -453,7 +453,7 @@ export default function Game1_OKC() {
             transform="translate(406, 251.00000000000003)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -462,7 +462,7 @@ export default function Game1_OKC() {
             transform="translate(477, 72)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -471,7 +471,7 @@ export default function Game1_OKC() {
             transform="translate(441, 213)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -480,7 +480,7 @@ export default function Game1_OKC() {
             transform="translate(479, 19.000000000000004)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -489,7 +489,7 @@ export default function Game1_OKC() {
             transform="translate(13.000000000000007, 34)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -498,7 +498,7 @@ export default function Game1_OKC() {
             transform="translate(26.999999999999993, 14.000000000000004)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -507,7 +507,7 @@ export default function Game1_OKC() {
             transform="translate(21.999999999999993, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -516,7 +516,7 @@ export default function Game1_OKC() {
             transform="translate(153, 280)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -528,7 +528,7 @@ export default function Game1_OKC() {
             transform="translate(230, 297)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -537,7 +537,7 @@ export default function Game1_OKC() {
             transform="translate(275, 58.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -549,7 +549,7 @@ export default function Game1_OKC() {
             transform="translate(407, 239)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -558,7 +558,7 @@ export default function Game1_OKC() {
             transform="translate(480, 75)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -567,7 +567,7 @@ export default function Game1_OKC() {
             transform="translate(48.00000000000001, 190)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -578,7 +578,7 @@ export default function Game1_OKC() {
             transform="translate(308, 85)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -589,7 +589,7 @@ export default function Game1_OKC() {
             transform="translate(266, 43)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -598,7 +598,7 @@ export default function Game1_OKC() {
             transform="translate(261, 48.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -609,7 +609,7 @@ export default function Game1_OKC() {
             transform="translate(229, 230)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -618,7 +618,7 @@ export default function Game1_OKC() {
             transform="translate(316, 117.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -627,7 +627,7 @@ export default function Game1_OKC() {
             transform="translate(268, 48.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -636,7 +636,7 @@ export default function Game1_OKC() {
             transform="translate(26.000000000000014, 142)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -647,7 +647,7 @@ export default function Game1_OKC() {
             transform="translate(21.999999999999993, 29)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -656,7 +656,7 @@ export default function Game1_OKC() {
             transform="translate(299, 175)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -665,7 +665,7 @@ export default function Game1_OKC() {
             transform="translate(245, 70)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -674,7 +674,7 @@ export default function Game1_OKC() {
             transform="translate(118.99999999999999, 24)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -683,7 +683,7 @@ export default function Game1_OKC() {
             transform="translate(163, 128)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -694,7 +694,7 @@ export default function Game1_OKC() {
             transform="translate(353, 291)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -703,7 +703,7 @@ export default function Game1_OKC() {
             transform="translate(234, 68)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -712,7 +712,7 @@ export default function Game1_OKC() {
             transform="translate(93.00000000000001, 261)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -723,7 +723,7 @@ export default function Game1_OKC() {
             transform="translate(373, 133)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -735,7 +735,7 @@ export default function Game1_OKC() {
             transform="translate(484, 77)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -746,7 +746,7 @@ export default function Game1_OKC() {
             transform="translate(114, 285)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -757,7 +757,7 @@ export default function Game1_OKC() {
             transform="translate(13.000000000000007, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -766,7 +766,7 @@ export default function Game1_OKC() {
             transform="translate(256, 175.99999999999997)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -775,7 +775,7 @@ export default function Game1_OKC() {
             transform="translate(447, 207.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -786,7 +786,7 @@ export default function Game1_OKC() {
             transform="translate(21.999999999999993, 58)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -797,7 +797,7 @@ export default function Game1_OKC() {
             transform="translate(254, 112)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -806,7 +806,7 @@ export default function Game1_OKC() {
             transform="translate(185, 193.00000000000003)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -815,7 +815,7 @@ export default function Game1_OKC() {
             transform="translate(263, 62)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -827,7 +827,7 @@ export default function Game1_OKC() {
             transform="translate(254, 63)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -836,7 +836,7 @@ export default function Game1_OKC() {
             transform="translate(217, 61)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -845,7 +845,7 @@ export default function Game1_OKC() {
             transform="translate(262, 183)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -854,7 +854,7 @@ export default function Game1_OKC() {
             transform="translate(250, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -865,7 +865,7 @@ export default function Game1_OKC() {
             transform="translate(120, 285)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -876,7 +876,7 @@ export default function Game1_OKC() {
             transform="translate(473, 21)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -885,7 +885,7 @@ export default function Game1_OKC() {
             transform="translate(68.99999999999999, 250)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -894,7 +894,7 @@ export default function Game1_OKC() {
             transform="translate(266, 283)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -903,7 +903,7 @@ export default function Game1_OKC() {
             transform="translate(164.00000000000003, 154)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -914,7 +914,7 @@ export default function Game1_OKC() {
             transform="translate(482, 34)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -923,7 +923,7 @@ export default function Game1_OKC() {
             transform="translate(192, 84)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -932,7 +932,7 @@ export default function Game1_OKC() {
             transform="translate(244, 67)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -943,7 +943,7 @@ export default function Game1_OKC() {
             transform="translate(243, 65)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -954,7 +954,7 @@ export default function Game1_OKC() {
             transform="translate(353, 72)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -963,7 +963,7 @@ export default function Game1_OKC() {
             transform="translate(233, 63)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -972,7 +972,7 @@ export default function Game1_OKC() {
             transform="translate(191, 125)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -984,7 +984,7 @@ export default function Game1_OKC() {
             transform="translate(260, 59.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -995,7 +995,7 @@ export default function Game1_OKC() {
             transform="translate(41.99999999999999, 193.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1006,7 +1006,7 @@ export default function Game1_OKC() {
             transform="translate(317, 135)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1018,7 +1018,7 @@ export default function Game1_OKC() {
             transform="translate(273, 308)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1030,7 +1030,7 @@ export default function Game1_OKC() {
             transform="translate(168, 130)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1039,7 +1039,7 @@ export default function Game1_OKC() {
             transform="translate(210.99999999999997, 84)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1051,7 +1051,7 @@ export default function Game1_OKC() {
             transform="translate(229, 57.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1062,7 +1062,7 @@ export default function Game1_OKC() {
             transform="translate(72, 270)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1073,7 +1073,7 @@ export default function Game1_OKC() {
             transform="translate(248, 103)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1082,7 +1082,7 @@ export default function Game1_OKC() {
             transform="translate(233, 68)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1091,7 +1091,7 @@ export default function Game1_OKC() {
             transform="translate(319, 304)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1103,7 +1103,7 @@ export default function Game1_OKC() {
             transform="translate(21.000000000000014, 40)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1112,7 +1112,7 @@ export default function Game1_OKC() {
             transform="translate(255, 68)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1121,7 +1121,7 @@ export default function Game1_OKC() {
             transform="translate(16.999999999999993, 188)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1130,7 +1130,7 @@ export default function Game1_OKC() {
             transform="translate(250, 66)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1139,7 +1139,7 @@ export default function Game1_OKC() {
             transform="translate(163, 155)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1148,7 +1148,7 @@ export default function Game1_OKC() {
             transform="translate(428, 250)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1157,7 +1157,7 @@ export default function Game1_OKC() {
             transform="translate(475, 86)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1168,7 +1168,7 @@ export default function Game1_OKC() {
             transform="translate(48.00000000000001, 204.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1177,7 +1177,7 @@ export default function Game1_OKC() {
             transform="translate(18.000000000000007, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1189,7 +1189,7 @@ export default function Game1_OKC() {
             transform="translate(82.00000000000003, 262)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1201,7 +1201,7 @@ export default function Game1_OKC() {
             transform="translate(303, 323)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -1210,7 +1210,7 @@ export default function Game1_OKC() {
             transform="translate(239, 59.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1219,7 +1219,7 @@ export default function Game1_OKC() {
             transform="translate(233, 51.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1228,7 +1228,7 @@ export default function Game1_OKC() {
             transform="translate(218, 56)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -1239,7 +1239,7 @@ export default function Game1_OKC() {
             transform="translate(244, 56)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
       </g>
