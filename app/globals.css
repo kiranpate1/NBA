@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
@@ -68,6 +69,8 @@ h3 {
 
 h3.gameclock {
   font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-size: 28px;
 }
 
@@ -78,6 +81,9 @@ h4 {
 p {
   font-family: var(--font-sans), sans-serif;
   font-size: 14px;
+}
+.boxscores p {
+  font-size: 12px;
 }
 
 small {
@@ -97,7 +103,8 @@ small {
   opacity: 1;
 }
 
-.court * {
+.maincourt * {
+  opacity: 0.5;
   vector-effect: non-scaling-stroke;
 }
 
@@ -109,4 +116,11 @@ small {
 .okc_courts svg {
   width: 108.5%;
   transform: translateY(-9%);
+}
+
+.sas_courts svg g,
+.okc_courts svg g {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 0.2s ease;
 }

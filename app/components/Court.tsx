@@ -5,7 +5,7 @@ type props = {
 export default function Court({ courtHeight }: props) {
   return (
     <svg
-      className="court relative h-full"
+      className="maincourt relative h-full"
       viewBox="0 0 941 501"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

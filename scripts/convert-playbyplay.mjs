@@ -67,6 +67,15 @@ const thunderTokens = new Set([
   "Joe",
 ]);
 
+const stripNameSuffix = (name) =>
+  name
+    .replace(/\b(?:Jr\.?|Sr\.?|I{2,4})$/i, "")
+    .replace(/[.,;:()]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const canonicalName = (name) => stripNameSuffix(name).toLowerCase();
+
 const isTime = (line) => /^\d{1,2}:\d{2}$/.test(line);
 const isScore = (line) => /^\d+\s*-\s*\d+$/.test(line);
 const isIgnorable = (line) =>
@@ -94,32 +103,72 @@ const extractAssistName = (playText) => {
   return match ? match[1].trim() : "NA";
 };
 
+const extractSubNames = (playText) => {
+  const match = playText.match(/^SUB:\s+(.+?)\s+FOR\s+(.+?)(?:\s*\(|$)/i);
+  if (!match) return { incoming: "NA", outgoing: "NA" };
+  return {
+    incoming: match[1].trim(),
+    outgoing: match[2].trim(),
+  };
+};
+
+const extractJumpBallTipTo = (playText) => {
+  const match = playText.match(/Tip to\s+(.+)$/i);
+  return match ? match[1].trim() : "NA";
+};
+
 const stripDistancePrefix = (text) => text.replace(/^\d+'\s+/, "").trim();
 
 const inferPlayer = (playText) => {
   if (playText.startsWith("Jump Ball ")) {
-    const jumpBallMatch = playText.match(/^Jump Ball\s+([^\s]+)/);
-    return jumpBallMatch ? jumpBallMatch[1] : "Unknown";
+    const jumpBallMatch = playText.match(/^Jump Ball\s+(.+?)\s+vs\./i);
+    if (jumpBallMatch) return stripNameSuffix(jumpBallMatch[1]);
+
+    const jumpBallShortMatch = playText.match(/^Jump Ball\s+([^\s]+)/);
+    return jumpBallShortMatch
+      ? stripNameSuffix(jumpBallShortMatch[1])
+      : "Unknown";
   }
 
   if (playText.startsWith("SUB:")) {
-    const subMatch = playText.match(/^SUB:\s+([^\s]+)/);
-    return subMatch ? subMatch[1] : "Unknown";
+    const subMatch = playText.match(/^SUB:\s+(.+?)\s+FOR\s+/i);
+    if (subMatch) return stripNameSuffix(subMatch[1]);
+
+    const subShortMatch = playText.match(/^SUB:\s+([^\s]+(?:\s+[^\s]+)?)/);
+    return subShortMatch ? stripNameSuffix(subShortMatch[1]) : "Unknown";
   }
 
   const cleaned = playText.replace(/^MISS\s+/, "").replace(/^Spurs\s+/, "");
-  const playerMatch = cleaned.match(/^([^\s]+)/);
-  return playerMatch ? playerMatch[1] : "Unknown";
+
+  const initialsMatch = cleaned.match(
+    /^([A-Z]\.\s+[A-Za-z'\-]+(?:\s+[A-Za-z'\-]+)?)/,
+  );
+  if (initialsMatch) return stripNameSuffix(initialsMatch[1]);
+
+  const fullNameMatch = cleaned.match(
+    /^([A-Z][A-Za-z'\-]+(?:\s+[A-Z][A-Za-z'\-]+)+)/,
+  );
+  if (fullNameMatch) return stripNameSuffix(fullNameMatch[1]);
+
+  const singleMatch = cleaned.match(/^([^\s]+)/);
+  return singleMatch ? stripNameSuffix(singleMatch[1]) : "Unknown";
 };
 
-const inferTeam = (playText, player) => {
+const inferDirectTeam = (playText) => {
   if (/^THUNDER\b/.test(playText)) return "THUNDER";
   if (/^SPURS\b/i.test(playText) || /^Spurs\b/.test(playText)) return "SPURS";
+  return null;
+};
 
-  if (spursTokens.has(player)) return "SPURS";
-  if (thunderTokens.has(player)) return "THUNDER";
+const inferTeamFromKnownNames = (playText, playerTeamMap) => {
+  const normalizedText = canonicalName(playText);
+  for (const [knownName, team] of playerTeamMap.entries()) {
+    if (knownName && normalizedText.includes(knownName)) {
+      return team;
+    }
+  }
 
-  return "UNKNOWN";
+  return null;
 };
 
 const inferResultLabel = (playText) => {
@@ -150,16 +199,23 @@ const inferPoints = (playText) => {
   return 2;
 };
 
-const makeRow = ({ time, quarter, playText }) => {
+const makeRow = ({
+  time,
+  quarter,
+  playText,
+  playerTeamMap,
+  lastResolvedTeam,
+}) => {
   const player = inferPlayer(playText);
-  const team = inferTeam(playText, player);
   const assistName = extractAssistName(playText);
-  const assistsFlag = assistName === "NA" ? 0 : 1;
+  const { incoming: subIncomingName, outgoing: subOutgoingName } =
+    extractSubNames(playText);
+  const jumpBallTipTo = extractJumpBallTipTo(playText);
 
   const row = {
     time,
     quarter,
-    team,
+    team: "UNKNOWN",
     player,
     play: playText,
     distance: extractDistance(playText),
@@ -167,14 +223,55 @@ const makeRow = ({ time, quarter, playText }) => {
     assist: assistName,
     points: inferPoints(playText),
     rebounds: /\bREBOUND\b/i.test(playText) ? 1 : 0,
-    assists: assistsFlag,
+    assists: assistName === "NA" ? 0 : 1,
     steals: /\bSTEAL\b/i.test(playText) ? 1 : 0,
     blocks: /\bBLOCK\b/i.test(playText) ? 1 : 0,
     turnovers: /\bTurnover\b/i.test(playText) ? 1 : 0,
     fouls: /\bFOUL\b/i.test(playText) ? 1 : 0,
   };
 
-  return header.map((column) => toCsvField(row[column])).join(",");
+  const lookupKnownTeam = (name) => {
+    if (!name || name === "NA") return null;
+    return playerTeamMap.get(canonicalName(name)) ?? null;
+  };
+
+  let team = inferDirectTeam(playText);
+
+  if (!team && spursTokens.has(player)) team = "SPURS";
+  if (!team && thunderTokens.has(player)) team = "THUNDER";
+  if (!team) team = lookupKnownTeam(player);
+
+  if (!team) team = lookupKnownTeam(assistName);
+  if (!team) team = lookupKnownTeam(subIncomingName);
+  if (!team) team = lookupKnownTeam(subOutgoingName);
+  if (!team) team = lookupKnownTeam(jumpBallTipTo);
+  if (!team) team = inferTeamFromKnownNames(playText, playerTeamMap);
+
+  if (!team && /Instant Replay/i.test(playText)) {
+    team = lastResolvedTeam;
+  }
+
+  if (!team && /^Double Technical/i.test(playText)) {
+    team = inferTeamFromKnownNames(playText, playerTeamMap) ?? lastResolvedTeam;
+  }
+
+  row.team = team ?? "UNKNOWN";
+
+  const register = (name) => {
+    if (!name || name === "NA" || row.team === "UNKNOWN") return;
+    playerTeamMap.set(canonicalName(name), row.team);
+  };
+
+  register(player);
+  register(assistName);
+  register(subIncomingName);
+  register(subOutgoingName);
+  register(jumpBallTipTo);
+
+  return {
+    csvLine: header.map((column) => toCsvField(row[column])).join(","),
+    team: row.team,
+  };
 };
 
 const convert = async () => {
@@ -186,6 +283,15 @@ const convert = async () => {
   let pendingTime = null;
   let pendingPlay = null;
   let rowCount = 0;
+  let lastResolvedTeam = null;
+  const playerTeamMap = new Map();
+
+  for (const token of spursTokens) {
+    playerTeamMap.set(canonicalName(token), "SPURS");
+  }
+  for (const token of thunderTokens) {
+    playerTeamMap.set(canonicalName(token), "THUNDER");
+  }
 
   output.write(`${header.join(",")}\n`);
 
@@ -219,25 +325,35 @@ const convert = async () => {
     if (isScore(line)) continue;
 
     if (isTime(line)) {
-      // Backward compatibility: if a play was read before its timestamp, flush it.
       if (pendingPlay && !pendingTime) {
-        output.write(
-          makeRow({ time: line, quarter, playText: pendingPlay }) + "\n",
-        );
+        const { csvLine, team } = makeRow({
+          time: line,
+          quarter,
+          playText: pendingPlay,
+          playerTeamMap,
+          lastResolvedTeam,
+        });
+        output.write(`${csvLine}\n`);
         rowCount += 1;
+        if (team !== "UNKNOWN") lastResolvedTeam = team;
         pendingPlay = null;
       } else {
-        // Preferred format: timestamp appears before the play block.
         pendingTime = line;
       }
       continue;
     }
 
     if (pendingTime) {
-      output.write(
-        makeRow({ time: pendingTime, quarter, playText: line }) + "\n",
-      );
+      const { csvLine, team } = makeRow({
+        time: pendingTime,
+        quarter,
+        playText: line,
+        playerTeamMap,
+        lastResolvedTeam,
+      });
+      output.write(`${csvLine}\n`);
       rowCount += 1;
+      if (team !== "UNKNOWN") lastResolvedTeam = team;
       pendingTime = null;
       pendingPlay = null;
       continue;

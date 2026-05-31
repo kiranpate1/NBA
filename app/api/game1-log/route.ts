@@ -9,6 +9,14 @@ type PlayEntry = {
   player: string;
   play: string;
   result: "made" | "miss" | "other";
+  assist: string;
+  points: number;
+  rebounds: number;
+  assists: number;
+  steals: number;
+  blocks: number;
+  turnovers: number;
+  fouls: number;
 };
 
 const parseCsvLine = (line: string): string[] => {
@@ -77,13 +85,14 @@ export async function GET() {
 
   for (const line of dataLines) {
     const row = parseCsvLine(line);
-    if (row.length < 7) continue;
+    if (row.length < 15) continue;
 
     const time = row[0];
     const quarterNum = row[1];
     const teamRaw = row[2];
     const playerRaw = row[3];
     const play = row[4];
+    const assistRaw = row[7];
 
     const team =
       teamRaw === "THUNDER" ? "OKC" : teamRaw === "SPURS" ? "SAS" : null;
@@ -96,6 +105,14 @@ export async function GET() {
       player: toDisplayPlayer(playerRaw),
       play,
       result: toShotResult(play),
+      assist: assistRaw,
+      points: Number.parseInt(row[8], 10) || 0,
+      rebounds: Number.parseInt(row[9], 10) || 0,
+      assists: Number.parseInt(row[10], 10) || 0,
+      steals: Number.parseInt(row[11], 10) || 0,
+      blocks: Number.parseInt(row[12], 10) || 0,
+      turnovers: Number.parseInt(row[13], 10) || 0,
+      fouls: Number.parseInt(row[14], 10) || 0,
     });
   }
 

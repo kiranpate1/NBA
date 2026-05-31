@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Court from "./components/Court";
 import GameGrid from "./components/GameGrid";
 import GameCard from "./components/GameCard";
-import Game1_SAS from "./games/Game1_SAS";
-import Game1_OKC from "./games/Game1_OKC";
+import Game1_SAS from "./graphics/game1/Game1_SAS";
+import Game1_OKC from "./graphics/game1/Game1_OKC";
 import { games } from "./info/games";
 import { spursPlayers, thunderPlayers } from "./info/players";
-import Game1Spread from "./games/Game1Spread";
+import Game1Spread from "./graphics/game1/Game1Spread";
 
 type PlayEntry = {
   time: string;
@@ -17,7 +17,92 @@ type PlayEntry = {
   player: string;
   play: string;
   result: "made" | "miss" | "other";
+  assist: string;
+  points: number;
+  rebounds: number;
+  assists: number;
+  steals: number;
+  blocks: number;
+  turnovers: number;
+  fouls: number;
 };
+
+type PlayerStats = {
+  pts: number;
+  fgMade: number;
+  fgAtt: number;
+  reb: number;
+  ast: number;
+  threePtMade: number;
+  threePtAtt: number;
+  stl: number;
+  blk: number;
+};
+
+type TeamStats = Record<string, PlayerStats>;
+type TeamScore = { OKC: number; SAS: number };
+
+const makeEmptyPlayerStats = (): PlayerStats => ({
+  pts: 0,
+  fgMade: 0,
+  fgAtt: 0,
+  reb: 0,
+  ast: 0,
+  threePtMade: 0,
+  threePtAtt: 0,
+  stl: 0,
+  blk: 0,
+});
+
+const makeEmptyTeamStats = (players: Array<{ name: string }>): TeamStats =>
+  Object.fromEntries(
+    players.map((player) => [player.name, makeEmptyPlayerStats()]),
+  );
+
+const makeNameLookup = (
+  players: Array<{ name: string }>,
+  aliases: Record<string, string> = {},
+) => {
+  const lookup = new Map<string, string>();
+
+  for (const player of players) {
+    const fullName = player.name;
+    lookup.set(fullName.toLowerCase(), fullName);
+
+    const parts = fullName.split(" ");
+    const lastName = parts[parts.length - 1];
+    lookup.set(lastName.toLowerCase(), fullName);
+  }
+
+  for (const [token, fullName] of Object.entries(aliases)) {
+    lookup.set(token.toLowerCase(), fullName);
+  }
+
+  return lookup;
+};
+
+const thunderNameLookup = makeNameLookup(thunderPlayers, {
+  jalen: "Jalen Williams",
+  "jal.": "Jalen Williams",
+  jaylin: "Jaylin Williams",
+  "jay.": "Jaylin Williams",
+});
+const spursNameLookup = makeNameLookup(spursPlayers);
+
+const resolveRosterName = (team: "OKC" | "SAS", rawName: string) => {
+  const token = rawName.trim().toLowerCase();
+  if (!token || token === "na" || token === "unknown") return null;
+  if (token === "team thunder" || token === "team spurs") return null;
+
+  const lookup = team === "OKC" ? thunderNameLookup : spursNameLookup;
+  return lookup.get(token) ?? null;
+};
+
+const isFreeThrowPlay = (play: string) => /\bfree\s*throw\b/i.test(play);
+const isThreePointPlay = (play: string) => /\b3pt\b/i.test(play);
+const isFieldGoalAttempt = (entry: PlayEntry) =>
+  (entry.result === "made" || entry.result === "miss") &&
+  !isFreeThrowPlay(entry.play);
 
 const getAbsoluteSeconds = (quarter: string, time: string): number => {
   const [minStr, secStr] = time.split(":");
@@ -103,8 +188,16 @@ export default function Home() {
   const footerMetricsRef = useRef({ top: 0, bottom: 0 });
   const gameClockRef = useRef<HTMLHeadingElement | null>(null);
   const quarterRef = useRef<HTMLElement | null>(null);
+  const sasCourtRef = useRef<HTMLDivElement | null>(null);
+  const okcCourtRef = useRef<HTMLDivElement | null>(null);
   const [plays, setPlays] = useState<PlayEntry[]>([]);
+  const [boxStats, setBoxStats] = useState(() => ({
+    OKC: makeEmptyTeamStats(thunderPlayers),
+    SAS: makeEmptyTeamStats(spursPlayers),
+  }));
+  const [teamScore, setTeamScore] = useState<TeamScore>({ OKC: 0, SAS: 0 });
   const [gameSeconds, setGameSeconds] = useState((48 + otTest * 5) * 60);
+  const [hasReachedBottom, setHasReachedBottom] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -142,13 +235,56 @@ export default function Home() {
     if (!scrollEl || !okcEl || !sasEl || !boundaryEl) return;
 
     const totalSeconds = gameSeconds;
+    let lastRenderedSecond = -1;
+    let lastZone: "above" | "active" | "below" | null = null;
 
-    const handleGame1Scroll = () => {
-      const rect = scrollEl.getBoundingClientRect();
-      const boundaryTop = boundaryEl.getBoundingClientRect().top;
-      const scrolledPx = boundaryTop - rect.top;
-      const progress = Math.min(1, Math.max(0, scrolledPx / rect.height));
-      const currentSeconds = progress * totalSeconds;
+    const computeSnapshot = (currentSeconds: number) => {
+      const next = {
+        OKC: makeEmptyTeamStats(thunderPlayers),
+        SAS: makeEmptyTeamStats(spursPlayers),
+      };
+      const score: TeamScore = { OKC: 0, SAS: 0 };
+
+      for (const entry of plays) {
+        const entrySeconds = getAbsoluteSeconds(entry.quarter, entry.time);
+        if (entrySeconds > currentSeconds) break;
+
+        score[entry.team] += entry.points;
+
+        const teamStats = next[entry.team];
+        const scorerName = resolveRosterName(entry.team, entry.player);
+
+        if (scorerName && teamStats[scorerName]) {
+          const scorerLine = teamStats[scorerName];
+          scorerLine.pts += entry.points;
+          scorerLine.reb += entry.rebounds;
+          scorerLine.stl += entry.steals;
+          scorerLine.blk += entry.blocks;
+
+          if (isFieldGoalAttempt(entry)) {
+            scorerLine.fgAtt += 1;
+            if (entry.result === "made") scorerLine.fgMade += 1;
+
+            if (isThreePointPlay(entry.play)) {
+              scorerLine.threePtAtt += 1;
+              if (entry.result === "made") scorerLine.threePtMade += 1;
+            }
+          }
+        }
+
+        const assistName = resolveRosterName(entry.team, entry.assist);
+        if (assistName && teamStats[assistName]) {
+          teamStats[assistName].ast += entry.assists;
+        }
+      }
+
+      return { boxStats: next, score };
+    };
+
+    const renderAtSecond = (currentSeconds: number) => {
+      const snapshot = computeSnapshot(currentSeconds);
+      setBoxStats(snapshot.boxStats);
+      setTeamScore(snapshot.score);
 
       const { quarter, remainingInQuarter } = getQuarterAndTime(
         currentSeconds,
@@ -172,18 +308,22 @@ export default function Home() {
       }
 
       const okcResult = okcPlay
-        ? okcPlay.result === "made"
-          ? "<b style='color: var(--make)'>✓</b>"
-          : okcPlay.result === "miss"
-            ? "<b style='color: var(--miss)'>✗</b>"
-            : ""
+        ? isFreeThrowPlay(okcPlay.play)
+          ? ""
+          : okcPlay.result === "made"
+            ? "<b style='color: var(--make)'>✓</b>"
+            : okcPlay.result === "miss"
+              ? "<b style='color: var(--miss)'>✗</b>"
+              : ""
         : "";
       const sasResult = sasPlay
-        ? sasPlay.result === "made"
-          ? "<b style='color: var(--make)'>✓</b>"
-          : sasPlay.result === "miss"
-            ? "<b style='color: var(--miss)'>✗</b>"
-            : ""
+        ? isFreeThrowPlay(sasPlay.play)
+          ? ""
+          : sasPlay.result === "made"
+            ? "<b style='color: var(--make)'>✓</b>"
+            : sasPlay.result === "miss"
+              ? "<b style='color: var(--miss)'>✗</b>"
+              : ""
         : "";
 
       okcEl.innerHTML = okcPlay
@@ -192,6 +332,80 @@ export default function Home() {
       sasEl.innerHTML = sasPlay
         ? `${sasResult} ${sasPlay.player[0]}. ${sasPlay.player.split(" ")[1] ?? ""} – ${sasPlay.play}`
         : "&ensp;";
+
+      const highlightShot = (
+        containerRef: React.RefObject<HTMLDivElement | null>,
+        activePlay: PlayEntry | null,
+      ) => {
+        const container = containerRef.current;
+        if (!container) return;
+        const shots = container.querySelectorAll<SVGGElement>("g.shot");
+        shots.forEach((g) => {
+          g.style.opacity = "0.05";
+          g.style.transform = "scale(1)";
+        });
+        if (!activePlay) return;
+        const suffix = `${activePlay.quarter} - ${activePlay.time}`;
+        for (const g of shots) {
+          const titleEl = g.querySelector("title");
+          if (titleEl?.textContent?.includes(suffix)) {
+            g.style.opacity = "1";
+            g.style.transform = "scale(4)";
+            break;
+          }
+        }
+      };
+
+      highlightShot(sasCourtRef, sasPlay);
+      highlightShot(okcCourtRef, okcPlay);
+    };
+
+    const handleGame1Scroll = () => {
+      const rect = scrollEl.getBoundingClientRect();
+      const boundaryTop = boundaryEl.getBoundingClientRect().top;
+      const scrolledPx = boundaryTop - rect.top;
+
+      if (scrolledPx <= 0) {
+        if (lastZone === "above") return;
+
+        if (gameClockRef.current) gameClockRef.current.textContent = "12:00";
+        if (quarterRef.current) quarterRef.current.textContent = "Q1";
+        okcEl.innerHTML = "&ensp;";
+        sasEl.innerHTML = "&ensp;";
+        setBoxStats({
+          OKC: makeEmptyTeamStats(thunderPlayers),
+          SAS: makeEmptyTeamStats(spursPlayers),
+        });
+        setTeamScore({ OKC: 0, SAS: 0 });
+        [sasCourtRef, okcCourtRef].forEach((ref) => {
+          ref.current
+            ?.querySelectorAll<SVGGElement>("g.shot")
+            .forEach((g) => (g.style.opacity = "1"));
+        });
+
+        lastZone = "above";
+        lastRenderedSecond = -1;
+        return;
+      }
+
+      if (scrolledPx >= rect.height) {
+        const finalSecond = Math.max(0, Math.floor(totalSeconds));
+        if (lastZone === "below" && lastRenderedSecond === finalSecond) return;
+
+        renderAtSecond(finalSecond);
+        lastZone = "below";
+        lastRenderedSecond = finalSecond;
+        return;
+      }
+
+      const progress = Math.min(1, Math.max(0, scrolledPx / rect.height));
+      const currentSecond = Math.max(0, Math.floor(progress * totalSeconds));
+
+      if (lastZone === "active" && lastRenderedSecond === currentSecond) return;
+
+      renderAtSecond(currentSecond);
+      lastZone = "active";
+      lastRenderedSecond = currentSecond;
     };
 
     window.addEventListener("scroll", handleGame1Scroll, { passive: true });
@@ -267,7 +481,7 @@ export default function Home() {
     <main className="">
       <div
         className="relative z-4 w-full bg-(--background)"
-        style={{ height: `calc(100dvh - ${courtHeight + topLipHeight}px)` }}
+        style={{ height: `100dvh` }}
       >
         <div className="w-full h-full grid grid-cols-2 p-4">
           {/* use text effect from your codepen, both animating from center */}
@@ -284,7 +498,37 @@ export default function Home() {
         </div>
       </div>
       <div className="relative">
+        {/* games nav */}
+        <div
+          className="absolute z-4"
+          style={{ inset: `-${topLipHeight}px 0 0 0` }}
+        >
+          <div className="sticky z-2 top-0 w-full h-0">
+            <div
+              className="absolute z-10 top-4 left-1/2 -translate-x-1/2 w-full max-w-[966px] grid border-t border-b border-(--stroke) bg-(--background) duration-200 ease-in-out pointer-events-auto"
+              style={{
+                height: topLipHeight - 16,
+                gridTemplateColumns: hasReachedBottom
+                  ? "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"
+                  : "0fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
+              }}
+            >
+              <div className="flex items-center justify-center border-r border-(--stroke) overflow-hidden">
+                All
+              </div>
+              {games.map((game, i) => (
+                <div
+                  className="flex items-center justify-center border-r border-(--stroke) overflow-hidden"
+                  key={i}
+                >
+                  <h4>{i + 1}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="absolute z-3 inset-0">
+          {/* solid background for grid */}
           <div className="sticky top-[100dvh] w-full h-0 flex items-end justify-stretch pointer-events-none">
             <div className="relative w-full h-screen p-4">
               <div className="absolute inset-[auto_0_0_0] px-4 pb-4 bg-(--background)">
@@ -297,6 +541,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* background grid for nav */}
           <div className="absolute inset-4 flex flex-col items-stretch">
             {/* insert games loop here eventually */}
             <div className="flex-1 flex items-stretch flex-col">
@@ -311,13 +556,42 @@ export default function Home() {
               <div style={{ height: `${courtHeight + topLipHeight}px` }}></div>
             </div>
           </div>
+          {/* top lip */}
           <div className="sticky z-1 top-0 w-full h-4 px-4 bg-(--background) flex flex-col items-stretch justify-end">
             <div className="translate-y-px border-b border-(--stroke)"></div>
           </div>
+          {/* court, play-by-play, boxscores */}
           <div className="sticky top-[100dvh] w-full h-0 flex items-end justify-stretch pointer-events-none">
             <div className="relative w-full h-screen p-4">
               <div className="absolute z-10 inset-[0_0_auto_0] h-4 bg-(--background)"></div>
               <div className="absolute z-10 inset-[auto_0_0_0] h-4 bg-(--background)"></div>
+              <div
+                className="absolute flex justify-between items-center"
+                style={{
+                  inset: `auto 16px ${courtHeight + topLipHeight + 16}px 16px`,
+                }}
+              >
+                <div className="flex items-center gap-2 p-4 pointer-events-auto">
+                  <div className="h-30 w-30 flex items-center justify-center">
+                    <img
+                      className="h-20"
+                      src="/thunder-logo.svg"
+                      alt="OKC Logo"
+                    />
+                  </div>
+                  <h2 className="text-(--okc)">{teamScore.OKC}</h2>
+                </div>
+                <div className="flex items-center gap-2 p-4">
+                  <h2 className="text-(--sas)">{teamScore.SAS}</h2>
+                  <div className="h-30 w-30 flex items-center justify-center">
+                    <img
+                      className="h-22"
+                      src="/spurs-logo.svg"
+                      alt="SAS Logo"
+                    />
+                  </div>
+                </div>
+              </div>
               <div
                 className="absolute z-10 left-0 right-0 h-0 px-4 pb-4"
                 style={{ bottom: courtHeight + topLipHeight }}
@@ -356,12 +630,127 @@ export default function Home() {
                     style={{ height: courtHeight }}
                   >
                     <div
-                      className="absolute bottom-0 w-100 translate-x-full border-l border-r border-(--stroke)"
+                      className="absolute bottom-[calc(100vh-96px)] xl:bottom-auto xl:top-0 w-[calc(50dvw-16px)] xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll pointer-events-auto"
                       style={{
-                        right: -topLipHeight + 19,
-                        height: courtHeight + topLipHeight - 19,
+                        transform: `translate(-100%, -${topLipHeight - 17}px)`,
+                        left: -topLipHeight + 19,
+                        height: courtHeight + topLipHeight - 18,
                       }}
-                    ></div>
+                    >
+                      <div className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] h-6.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]">
+                        <small className="self-center justify-self-start">
+                          Player
+                        </small>
+                        <small className="place-self-center">PTS</small>
+                        <small className="place-self-center">FG</small>
+                        <small className="place-self-center">REB</small>
+                        <small className="place-self-center">AST</small>
+                        <small className="place-self-center">3PT</small>
+                        <small className="place-self-center">STL</small>
+                        <small className="place-self-center">BLK</small>
+                      </div>
+                      {thunderPlayers.map((player, i) => (
+                        <div
+                          className="boxscores grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] py-0.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]"
+                          key={i}
+                        >
+                          <p className="self-center justify-self-start">
+                            {player.name[0]}. {player.name.split(" ")[1]}&ensp;
+                            {i < 5 && (
+                              <span style={{ opacity: 0.5 }}>
+                                {player.position[0]}
+                              </span>
+                            )}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.OKC[player.name]?.pts ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {(boxStats.OKC[player.name]?.fgMade ?? 0) +
+                              "-" +
+                              (boxStats.OKC[player.name]?.fgAtt ?? 0)}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.OKC[player.name]?.reb ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.OKC[player.name]?.ast ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {(boxStats.OKC[player.name]?.threePtMade ?? 0) +
+                              "-" +
+                              (boxStats.OKC[player.name]?.threePtAtt ?? 0)}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.OKC[player.name]?.stl ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.OKC[player.name]?.blk ?? 0}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                    <div
+                      className="absolute bottom-[calc(100vh-96px)] xl:bottom-auto xl:top-0 w-[calc(50dvw-16px)] xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-scroll pointer-events-auto"
+                      style={{
+                        transform: `translate(100%, -${topLipHeight - 17}px)`,
+                        right: -topLipHeight + 19,
+                        height: courtHeight + topLipHeight - 18,
+                      }}
+                    >
+                      <div className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] h-6.5 pl-1.5 border-b border-(--stroke) text-(--stroke)">
+                        <small className="self-center justify-self-start">
+                          Player
+                        </small>
+                        <small className="place-self-center">PTS</small>
+                        <small className="place-self-center">FG</small>
+                        <small className="place-self-center">REB</small>
+                        <small className="place-self-center">AST</small>
+                        <small className="place-self-center">3PT</small>
+                        <small className="place-self-center">STL</small>
+                        <small className="place-self-center">BLK</small>
+                      </div>
+                      {spursPlayers.map((player, i) => (
+                        <div
+                          className="boxscores grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] py-0.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]"
+                          key={i}
+                        >
+                          <p className="self-center justify-self-start">
+                            {player.name[0]}. {player.name.split(" ")[1]}&ensp;
+                            {i < 5 && (
+                              <span style={{ opacity: 0.5 }}>
+                                {player.position[0]}
+                              </span>
+                            )}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.SAS[player.name]?.pts ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {(boxStats.SAS[player.name]?.fgMade ?? 0) +
+                              "-" +
+                              (boxStats.SAS[player.name]?.fgAtt ?? 0)}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.SAS[player.name]?.reb ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.SAS[player.name]?.ast ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {(boxStats.SAS[player.name]?.threePtMade ?? 0) +
+                              "-" +
+                              (boxStats.SAS[player.name]?.threePtAtt ?? 0)}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.SAS[player.name]?.stl ?? 0}
+                          </p>
+                          <p className="place-self-center">
+                            {boxStats.SAS[player.name]?.blk ?? 0}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                     <div className="absolute z-1 inset-0 pointer-events-auto">
                       <div
                         className="sas_courts absolute top-0 right-0 w-50/94 flex justify-center"
@@ -369,6 +758,7 @@ export default function Home() {
                           transformOrigin: "bottom right",
                           transform: "rotate(90deg) translate(100%)",
                         }}
+                        ref={sasCourtRef}
                       >
                         {/* add other game cards here eventually */}
                         <Game1_SAS />
@@ -379,6 +769,7 @@ export default function Home() {
                           transformOrigin: "bottom left",
                           transform: "rotate(-90deg) translate(-100%)",
                         }}
+                        ref={okcCourtRef}
                       >
                         {/* add other game cards here eventually */}
                         <Game1_OKC />
@@ -424,7 +815,7 @@ export default function Home() {
       <footer
         ref={footerRef}
         className="w-full bg-gray-200"
-        style={{ height: `calc(100vh - ${courtHeight + topLipHeight}px)` }}
+        style={{ height: `calc(100vh - ${courtHeight + topLipHeight + 14}px)` }}
       ></footer>
     </main>
   );

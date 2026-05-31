@@ -1,0 +1,565 @@
+time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,steals,blocks,turnovers,fouls
+12:00,1,SPURS,Wembanyama,Jump Ball Wembanyama vs. Holmgren: Tip to Fox,NA,Jump Ball Wembanyama vs. Holmgren: Tip to Fox,NA,0,0,0,0,0,0,0
+11:39,1,SPURS,Wembanyama,MISS Wembanyama 17' Turnaround Fadeaway Shot,17,Turnaround Fadeaway Shot,NA,0,0,0,0,0,0,0
+11:37,1,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+11:36,1,SPURS,Wembanyama,Wembanyama 27' 3PT Jump Shot (3 PTS) (Fox 1 AST),27,3PT Jump Shot,Fox,3,0,1,0,0,0,0
+11:20,1,THUNDER,Hartenstein,Hartenstein 10' Floating Jump Shot (2 PTS) (Gilgeous-Alexander 1 AST),10,Floating Jump Shot,Gilgeous-Alexander,2,0,1,0,0,0,0
+11:02,1,SPURS,Champagnie,MISS Champagnie 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+11:00,1,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:48,1,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 15' Step Back Jump Shot,15,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+10:45,1,THUNDER,Wallace REBOUND,Wallace REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:36,1,THUNDER,Holmgren,MISS Holmgren 3' Cutting Dunk Shot,3,Cutting Dunk Shot,NA,0,0,0,0,0,0,0
+10:36,1,SPURS,Wembanyama BLOCK,Wembanyama BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+10:34,1,THUNDER,Dort REBOUND,Dort REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:33,1,UNKNOWN,Thunder Turnover,Thunder Turnover: Shot Clock (T#1),NA,TURNOVER,NA,0,0,0,0,0,1,0
+10:25,1,SPURS,Wembanyama,MISS Wembanyama 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+10:22,1,THUNDER,Wallace REBOUND,Wallace REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:08,1,THUNDER,Hartenstein,Hartenstein 12' Floating Jump Shot (4 PTS) (Gilgeous-Alexander 2 AST),12,Floating Jump Shot,Gilgeous-Alexander,2,0,1,0,0,0,0
+09:53,1,SPURS,Castle,Castle 12' Pullup Jump Shot (2 PTS) (Wembanyama 1 AST),12,Pullup Jump Shot,Wembanyama,2,0,1,0,0,0,0
+09:36,1,THUNDER,Hartenstein,Hartenstein 14' Floating Jump Shot (6 PTS) (Holmgren 1 AST),14,Floating Jump Shot,Holmgren,2,0,1,0,0,0,0
+09:28,1,SPURS,Vassell,MISS Vassell 10' Step Back Jump Shot,10,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+09:26,1,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:21,1,SPURS,Champagnie,Champagnie P.FOUL (P1.T1) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+09:11,1,THUNDER,Wallace,MISS Wallace 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+09:08,1,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+09:08,1,THUNDER,Hartenstein,Hartenstein L.B.FOUL (P1.T1) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+08:58,1,SPURS,Wembanyama,Wembanyama 1' Alley Oop Dunk (5 PTS) (Castle 1 AST),1,Alley Oop Dunk,Castle,2,0,1,0,0,0,0
+08:31,1,THUNDER,Hartenstein,Hartenstein 9' Floating Jump Shot (8 PTS) (Gilgeous-Alexander 3 AST),9,Floating Jump Shot,Gilgeous-Alexander,2,0,1,0,0,0,0
+08:20,1,SPURS,Champagnie,MISS Champagnie 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+08:16,1,THUNDER,Dort REBOUND,Dort REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:04,1,THUNDER,Hartenstein,MISS Hartenstein 10' Floating Jump Shot,10,Floating Jump Shot,NA,0,0,0,0,0,0,0
+08:02,1,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:49,1,SPURS,Champagnie,Champagnie 1' Driving Layup (2 PTS) (Wembanyama 2 AST),1,Driving Layup,Wembanyama,2,0,1,0,0,0,0
+07:34,1,THUNDER,Hartenstein,MISS Hartenstein 10' Floating Jump Shot,10,Floating Jump Shot,NA,0,0,0,0,0,0,0
+07:32,1,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:26,1,THUNDER,Holmgren,Holmgren S.FOUL (P1.T2) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+07:26,1,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 1 of 2 (6 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+07:26,1,SPURS,Harper,SUB: Harper FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
+07:26,1,SPURS,Johnson,SUB: Johnson FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+07:26,1,THUNDER,J Williams,SUB: J. Williams FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+07:26,1,THUNDER,Caruso,SUB: Caruso FOR Hartenstein,NA,SUB,NA,0,0,0,0,0,0,0
+07:26,1,THUNDER,McCain,SUB: McCain FOR Wallace,NA,SUB,NA,0,0,0,0,0,0,0
+07:26,1,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 2 of 2 (7 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+07:00,1,THUNDER,McCain,MISS McCain 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:58,1,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:52,1,SPURS,Johnson,Johnson 5' Running Pull-Up Jump Shot (2 PTS) (Wembanyama 3 AST),5,Running Pull-Up Jump Shot,Wembanyama,2,0,1,0,0,0,0
+06:30,1,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 12' Driving Floating Jump Shot,12,Driving Floating Jump Shot,NA,0,0,0,0,0,0,0
+06:29,1,SPURS,Johnson REBOUND,Johnson REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:18,1,SPURS,Johnson,MISS Johnson 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:16,1,SPURS,Johnson REBOUND,Johnson REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:13,1,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 1 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+06:09,1,SPURS,Castle,Castle 25' 3PT Jump Shot (5 PTS) (Harper 1 AST),25,3PT Jump Shot,Harper,3,0,1,0,0,0,0
+05:45,1,THUNDER,J Williams,MISS J. Williams 25' 3PT Jump Shot,25,Williams 25' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+05:43,1,SPURS,Castle REBOUND,Castle REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:40,1,SPURS,Vassell,Vassell 25' 3PT Running Jump Shot (3 PTS) (Castle 2 AST),25,3PT Running Jump Shot,Castle,3,0,1,0,0,0,0
+05:27,1,SPURS,Harper,Harper P.FOUL (P1.T2) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+05:27,1,THUNDER,K Williams,SUB: K. Williams FOR Dort,NA,SUB,NA,0,0,0,0,0,0,0
+05:15,1,THUNDER,J Williams Out,J. Williams Out of Bounds - Bad Pass Turnover Turnover (P1.T2),NA,TURNOVER,NA,0,0,0,0,0,1,0
+05:07,1,THUNDER,Caruso,Caruso P.FOUL (P1.T3) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+04:56,1,SPURS,Johnson Lost Ball Turnover,Johnson Lost Ball Turnover (P1.T1),NA,TURNOVER,NA,0,0,0,0,0,1,0
+04:56,1,THUNDER,Gilgeous-Alexander STEAL,Gilgeous-Alexander STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+04:45,1,THUNDER,McCain,MISS McCain 2' Driving Reverse Layup,2,Driving Reverse Layup,NA,0,0,0,0,0,0,0
+04:45,1,SPURS,Vassell BLOCK,Vassell BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+04:43,1,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:40,1,SPURS,Wembanyama Running Alley Oop Dunk Shot,Wembanyama Running Alley Oop Dunk Shot (9 PTS) (Vassell 1 AST),NA,Running Alley Oop Dunk Shot,Vassell,2,0,1,0,0,0,0
+04:39,1,UNKNOWN,Thunder Timeout,Thunder Timeout: Regular (Reg.1 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+04:39,1,THUNDER,Hartenstein,SUB: Hartenstein FOR Gilgeous-Alexander,NA,SUB,NA,0,0,0,0,0,0,0
+04:39,1,THUNDER,Holmgren,SUB: Holmgren FOR J. Williams,NA,SUB,NA,0,0,0,0,0,0,0
+04:27,1,THUNDER,Holmgren Lost Ball Turnover,Holmgren Lost Ball Turnover (P1.T3),NA,TURNOVER,NA,0,0,0,0,0,1,0
+04:27,1,SPURS,Wembanyama STEAL,Wembanyama STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+04:19,1,THUNDER,K Williams S,K. Williams S.FOUL (P1.T4) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+04:19,1,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 1 of 2 (10 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+04:19,1,SPURS,Champagnie,SUB: Champagnie FOR Vassell,NA,SUB,NA,0,0,0,0,0,0,0
+04:19,1,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 2 of 2 (11 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+04:00,1,THUNDER,Holmgren Backcourt Turnover,Holmgren Backcourt Turnover (P2.T4),NA,TURNOVER,NA,0,0,0,0,0,1,0
+03:50,1,SPURS,Castle,MISS Castle 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:45,1,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:38,1,THUNDER,McCain,MISS McCain 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+03:37,1,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+03:37,1,THUNDER,Hartenstein,Hartenstein L.B.FOUL (P2.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+03:37,1,SPURS,Johnson Free Throw,MISS Johnson Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+03:37,1,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+03:37,1,SPURS,Fox,SUB: Fox FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+03:37,1,THUNDER,Gilgeous-Alexander,SUB: Gilgeous-Alexander FOR Caruso,NA,SUB,NA,0,0,0,0,0,0,0
+03:37,1,THUNDER,Wiggins,SUB: Wiggins FOR Hartenstein,NA,SUB,NA,0,0,0,0,0,0,0
+03:37,1,SPURS,Johnson Free Throw,MISS Johnson Free Throw 2 of 2,NA,Free Throw 2 of 2,NA,0,0,0,0,0,0,0
+03:35,1,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:23,1,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 17' Pullup Jump Shot (2 PTS),17,Pullup Jump Shot,NA,2,0,0,0,0,0,0
+03:09,1,SPURS,Champagnie,MISS Champagnie 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:08,1,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+02:59,1,SPURS,Harper,Harper P.FOUL (P2.T3) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+02:59,1,SPURS,Kornet,SUB: Kornet FOR Wembanyama,NA,SUB,NA,0,0,0,0,0,0,0
+02:59,1,SPURS,Castle,SUB: Castle FOR Harper,NA,SUB,NA,0,0,0,0,0,0,0
+02:59,1,SPURS,Vassell,SUB: Vassell FOR Johnson,NA,SUB,NA,0,0,0,0,0,0,0
+02:59,1,THUNDER,J Williams,SUB: J. Williams FOR McCain,NA,SUB,NA,0,0,0,0,0,0,0
+02:50,1,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 20' Step Back Jump Shot,20,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+02:47,1,SPURS,Kornet REBOUND,Kornet REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:41,1,SPURS,Vassell,MISS Vassell 13' Fadeaway Jumper,13,Fadeaway Jumper,NA,0,0,0,0,0,0,0
+02:39,1,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+02:28,1,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 2' Driving Layup (4 PTS),2,Driving Layup,NA,2,0,0,0,0,0,0
+02:17,1,SPURS,Kornet,Kornet 1' Dunk (2 PTS) (Fox 2 AST),1,Dunk,Fox,2,0,1,0,0,0,0
+01:57,1,SPURS,Fox,Fox S.FOUL (P1.T4) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+01:57,1,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 1 of 2 (5 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+01:57,1,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 2 of 2 (6 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+01:46,1,SPURS,Vassell,Vassell 3PT Jump Shot (6 PTS) (Champagnie 1 AST),NA,3PT Jump Shot,Champagnie,3,0,1,0,0,0,0
+01:20,1,THUNDER,K Williams,MISS K. Williams 17' Pullup Jump Shot,17,Williams 17' Pullup Jump Shot,NA,0,0,0,0,0,0,0
+01:18,1,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+01:12,1,SPURS,Castle,MISS Castle 3' Driving Layup,3,Driving Layup,NA,0,0,0,0,0,0,0
+01:10,1,THUNDER,Gilgeous-Alexander REBOUND,Gilgeous-Alexander REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+01:06,1,THUNDER,J Williams,J. Williams 25' 3PT Jump Shot (3 PTS) (Gilgeous-Alexander 4 AST),25,Williams 25' 3PT Jump Shot,Gilgeous-Alexander,3,0,1,0,0,0,0
+00:52,1,SPURS,Fox,MISS Fox 19' Step Back Jump Shot,19,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+00:50,1,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:38,1,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 8' Driving Floating Jump Shot,8,Driving Floating Jump Shot,NA,0,0,0,0,0,0,0
+00:36,1,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:34,1,SPURS,Wembanyama,SUB: Wembanyama FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+00:34,1,THUNDER,Wallace,SUB: Wallace FOR K. Williams,NA,SUB,NA,0,0,0,0,0,0,0
+00:26,1,SPURS,Fox,MISS Fox 9' Step Back Jump Shot,9,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+00:26,1,THUNDER,Holmgren BLOCK,Holmgren BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+00:22,1,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:04,1,THUNDER,Wiggins,MISS Wiggins 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+00:04,1,SPURS,Wembanyama BLOCK,Wembanyama BLOCK (2 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+00:02,1,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:1 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:02,1,THUNDER,Holmgren Tip Layup Shot,Holmgren Tip Layup Shot (2 PTS),NA,Tip Layup Shot,NA,2,0,0,0,0,0,0
+00:00,1,SPURS,SPURS Heave,SPURS Heave,NA,SPURS Heave,NA,0,0,0,0,0,0,0
+00:00,1,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+11:46,2,THUNDER,McCain,MISS McCain 27' 3PT Jump Shot,27,3PT Jump Shot,NA,0,0,0,0,0,0,0
+11:42,2,THUNDER,McCain REBOUND,McCain REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+11:41,2,THUNDER,McCain Bad Pass Turnover,McCain Bad Pass Turnover (P1.T5),NA,TURNOVER,NA,0,0,0,0,0,1,0
+11:41,2,SPURS,Bryant STEAL,Bryant STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+11:35,2,SPURS,Castle Out,Castle Out of Bounds - Bad Pass Turnover Turnover (P1.T2),NA,TURNOVER,NA,0,0,0,0,0,1,0
+11:25,2,THUNDER,Holmgren,Holmgren 1' Cutting Dunk Shot (4 PTS) (Wallace 1 AST),1,Cutting Dunk Shot,Wallace,2,0,1,0,0,0,0
+11:01,2,SPURS,Bryant,MISS Bryant 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+10:59,2,THUNDER,Joe REBOUND,Joe REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:53,2,THUNDER,Joe,Joe 1' Driving Finger Roll Layup (2 PTS) (Caruso 1 AST),1,Driving Finger Roll Layup,Caruso,2,0,1,0,0,0,0
+10:53,2,SPURS,Bryant,Bryant S.FOUL (P1.T1) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+10:53,2,SPURS,Barnes,SUB: Barnes FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+10:53,2,SPURS,Harper,SUB: Harper FOR Bryant,NA,SUB,NA,0,0,0,0,0,0,0
+10:53,2,THUNDER,Joe Free Throw,Joe Free Throw 1 of 1 (3 PTS),NA,Free Throw 1 of 1,NA,1,0,0,0,0,0,0
+10:37,2,SPURS,Fox,Fox 9' Turnaround Fadeaway (2 PTS),9,Turnaround Fadeaway,NA,2,0,0,0,0,0,0
+10:18,2,THUNDER,McCain,MISS McCain 8' Fadeaway Jumper,8,Fadeaway Jumper,NA,0,0,0,0,0,0,0
+10:16,2,SPURS,Kornet REBOUND,Kornet REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:06,2,THUNDER,Holmgren,Holmgren S.FOUL (P2.T1) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+10:06,2,SPURS,Harper Free Throw,MISS Harper Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+10:06,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+10:06,2,THUNDER,Hartenstein,SUB: Hartenstein FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+10:06,2,SPURS,Harper Free Throw,Harper Free Throw 2 of 2 (1 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+09:55,2,THUNDER,Joe,MISS Joe 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+09:50,2,SPURS,Champagnie REBOUND,Champagnie REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:41,2,SPURS,Champagnie,MISS Champagnie 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+09:39,2,THUNDER,Joe REBOUND,Joe REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:34,2,THUNDER,Wallace,MISS Wallace 3' Running Pull-Up Jump Shot,3,Running Pull-Up Jump Shot,NA,0,0,0,0,0,0,0
+09:33,2,SPURS,Kornet REBOUND,Kornet REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:29,2,THUNDER,Caruso,Caruso S.FOUL (P2.T2) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+09:29,2,SPURS,Harper Free Throw,MISS Harper Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+09:29,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+09:29,2,SPURS,Harper Free Throw,MISS Harper Free Throw 2 of 2,NA,Free Throw 2 of 2,NA,0,0,0,0,0,0,0
+09:26,2,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:12,2,THUNDER,Joe,MISS Joe 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+09:10,2,THUNDER,Wallace REBOUND,Wallace REBOUND (Off:2 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:09,2,THUNDER,Wallace,MISS Wallace 3' Putback Layup,3,Putback Layup,NA,0,0,0,0,0,0,0
+09:09,2,SPURS,Champagnie BLOCK,Champagnie BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+09:08,2,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:51,2,SPURS,Fox,MISS Fox 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+08:51,2,THUNDER,Caruso BLOCK,Caruso BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+08:51,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+08:51,2,SPURS,Castle,SUB: Castle FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+08:43,2,SPURS,Castle,MISS Castle 11' Step Back Jump Shot,11,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+08:42,2,SPURS,Kornet REBOUND,Kornet REBOUND (Off:1 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:41,2,SPURS,Kornet,Kornet 3' Putback Layup (4 PTS),3,Putback Layup,NA,2,0,0,0,0,0,0
+08:29,2,THUNDER,Hartenstein,MISS Hartenstein 5' Cutting Layup Shot,5,Cutting Layup Shot,NA,0,0,0,0,0,0,0
+08:29,2,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:1 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:27,2,THUNDER,Hartenstein Tip Layup Shot,Hartenstein Tip Layup Shot (10 PTS),NA,Tip Layup Shot,NA,2,0,0,0,0,0,0
+08:20,2,SPURS,Harper Lost Ball Turnover,Harper Lost Ball Turnover (P1.T3),NA,TURNOVER,NA,0,0,0,0,0,1,0
+08:20,2,THUNDER,Wallace STEAL,Wallace STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+08:17,2,THUNDER,Wallace,MISS Wallace 2' Running Layup,2,Running Layup,NA,0,0,0,0,0,0,0
+08:17,2,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+08:17,2,SPURS,Wembanyama,SUB: Wembanyama FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+08:17,2,THUNDER,Gilgeous-Alexander,SUB: Gilgeous-Alexander FOR McCain,NA,SUB,NA,0,0,0,0,0,0,0
+08:17,2,THUNDER,Wiggins,SUB: Wiggins FOR Caruso,NA,SUB,NA,0,0,0,0,0,0,0
+08:17,2,THUNDER,Dort,SUB: Dort FOR Joe,NA,SUB,NA,0,0,0,0,0,0,0
+08:03,2,UNKNOWN,Thunder Turnover,Thunder Turnover: Shot Clock (T#6),NA,TURNOVER,NA,0,0,0,0,0,1,0
+07:58,2,THUNDER,Dort,Dort P.FOUL (P1.T3) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+07:40,2,SPURS,Wembanyama,Wembanyama 18' Jump Shot (13 PTS),18,Jump Shot,NA,2,0,0,0,0,0,0
+07:32,2,THUNDER,Gilgeous-Alexander Out,Gilgeous-Alexander Out of Bounds Lost Ball Turnover (P1.T7),NA,TURNOVER,NA,0,0,0,0,0,1,0
+07:32,2,UNKNOWN,Thunder Timeout,Thunder Timeout: Regular (Reg.2 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+07:32,2,THUNDER,Instant Replay,Instant Replay2nd Period (8:55 PM EST),NA,Instant Replay2nd Period (8:55 PM EST),NA,0,0,0,0,0,0,0
+07:32,2,SPURS,Fox,SUB: Fox FOR Harper,NA,SUB,NA,0,0,0,0,0,0,0
+07:19,2,SPURS,Champagnie,MISS Champagnie 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+07:17,2,SPURS,Barnes REBOUND,Barnes REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:17,2,SPURS,Barnes Bad Pass Turnover,Barnes Bad Pass Turnover (P1.T4),NA,TURNOVER,NA,0,0,0,0,0,1,0
+07:17,2,THUNDER,Dort STEAL,Dort STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+07:03,2,THUNDER,Hartenstein,Hartenstein 1' Cutting Dunk Shot (12 PTS) (Gilgeous-Alexander 5 AST),1,Cutting Dunk Shot,Gilgeous-Alexander,2,0,1,0,0,0,0
+06:45,2,SPURS,Wembanyama Out,Wembanyama Out of Bounds Lost Ball Turnover (P1.T5),NA,TURNOVER,NA,0,0,0,0,0,1,0
+06:28,2,THUNDER,Dort OFF,Dort OFF.Foul (P2) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+06:28,2,THUNDER,Dort Offensive Foul Turnover,Dort Offensive Foul Turnover (P1.T8),NA,TURNOVER,NA,0,0,0,0,0,1,1
+06:28,2,THUNDER,McCain,SUB: McCain FOR Wallace,NA,SUB,NA,0,0,0,0,0,0,0
+06:19,2,THUNDER,McCain,McCain P.FOUL (P1.T4) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+06:14,2,THUNDER,Dort,Dort P.FOUL (P3.PN) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+06:14,2,SPURS,Barnes Free Throw,Barnes Free Throw 1 of 2 (1 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+06:14,2,THUNDER,Caruso,SUB: Caruso FOR Dort,NA,SUB,NA,0,0,0,0,0,0,0
+06:14,2,SPURS,Barnes Free Throw,MISS Barnes Free Throw 2 of 2,NA,Free Throw 2 of 2,NA,0,0,0,0,0,0,0
+06:11,2,THUNDER,Gilgeous-Alexander REBOUND,Gilgeous-Alexander REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:57,2,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 19' Pullup Jump Shot (8 PTS) (Hartenstein 1 AST),19,Pullup Jump Shot,Hartenstein,2,0,1,0,0,0,0
+05:42,2,SPURS,Wembanyama,MISS Wembanyama 6' Alley Oop Layup,6,Alley Oop Layup,NA,0,0,0,0,0,0,0
+05:41,2,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:41,2,SPURS,Wembanyama Tip Layup Shot,Wembanyama Tip Layup Shot (15 PTS),NA,Tip Layup Shot,NA,2,0,0,0,0,0,0
+05:16,2,SPURS,Wembanyama,Wembanyama P.FOUL (P1.T2) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+05:16,2,SPURS,Vassell,SUB: Vassell FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
+05:16,2,THUNDER,Holmgren,SUB: Holmgren FOR Wiggins,NA,SUB,NA,0,0,0,0,0,0,0
+05:16,2,THUNDER,J Williams,SUB: J. Williams FOR Hartenstein,NA,SUB,NA,0,0,0,0,0,0,0
+05:04,2,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 17' Step Back Jump Shot,17,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+05:03,2,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:57,2,SPURS,Barnes,MISS Barnes 2' Running Layup,2,Running Layup,NA,0,0,0,0,0,0,0
+04:56,2,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+04:32,2,THUNDER,J Williams,MISS J. Williams 3PT Jump Shot,NA,Williams 3PT Jump Shot,NA,0,0,0,0,0,0,0
+04:30,2,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:23,2,SPURS,Wembanyama,MISS Wembanyama 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+04:21,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+04:21,2,SPURS,Johnson,SUB: Johnson FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+04:21,2,SPURS,Harper,SUB: Harper FOR Barnes,NA,SUB,NA,0,0,0,0,0,0,0
+04:16,2,SPURS,Wembanyama,MISS Wembanyama 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+04:14,2,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:1 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:09,2,SPURS,Castle,Castle P.FOUL (P1.T3) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+04:04,2,THUNDER,Gilgeous-Alexander Out,Gilgeous-Alexander Out of Bounds Lost Ball Turnover (P2.T9),NA,TURNOVER,NA,0,0,0,0,0,1,0
+03:57,2,SPURS,Johnson,MISS Johnson 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+03:57,2,THUNDER,Caruso BLOCK,Caruso BLOCK (2 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+03:57,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+03:56,2,THUNDER,Caruso,Caruso S.FOUL (P3.PN) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+03:56,2,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 1 of 2 (16 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+03:56,2,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 2 of 2 (17 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+03:43,2,SPURS,Wembanyama,Wembanyama S.FOUL (P2.T4) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+03:43,2,THUNDER,Holmgren Free Throw,MISS Holmgren Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+03:43,2,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+03:43,2,THUNDER,Wallace,SUB: Wallace FOR Caruso,NA,SUB,NA,0,0,0,0,0,0,0
+03:43,2,THUNDER,K Williams,SUB: K. Williams FOR J. Williams,NA,SUB,NA,0,0,0,0,0,0,0
+03:43,2,THUNDER,Holmgren Free Throw,Holmgren Free Throw 2 of 2 (5 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+03:33,2,SPURS,Harper,MISS Harper 24' 3PT Jump Shot,24,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:27,2,THUNDER,K Williams REBOUND,K. Williams REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:22,2,SPURS,Johnson,Johnson P.FOUL (P1.PN) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+03:22,2,THUNDER,Holmgren Free Throw,Holmgren Free Throw 1 of 2 (6 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+03:22,2,THUNDER,Holmgren Free Throw,MISS Holmgren Free Throw 2 of 2,NA,Free Throw 2 of 2,NA,0,0,0,0,0,0,0
+03:19,2,SPURS,Johnson REBOUND,Johnson REBOUND (Off:1 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:13,2,SPURS,Johnson,MISS Johnson 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+03:12,2,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:2 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:12,2,SPURS,Wembanyama Tip Layup Shot,MISS Wembanyama Tip Layup Shot,NA,Tip Layup Shot,NA,0,0,0,0,0,0,0
+03:10,2,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:3 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:05,2,SPURS,Wembanyama Tip Layup Shot,MISS Wembanyama Tip Layup Shot,NA,Tip Layup Shot,NA,0,0,0,0,0,0,0
+03:05,2,SPURS,Castle REBOUND,Castle REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:00,2,SPURS,Johnson Lost Ball Turnover,Johnson Lost Ball Turnover (P2.T6),NA,TURNOVER,NA,0,0,0,0,0,1,0
+03:00,2,THUNDER,Wallace STEAL,Wallace STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+02:50,2,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 15' Step Back Jump Shot,15,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+02:48,2,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:48,2,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander P.FOUL (P1.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+02:48,2,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 2 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+02:48,2,SPURS,Champagnie,SUB: Champagnie FOR Johnson,NA,SUB,NA,0,0,0,0,0,0,0
+02:48,2,SPURS,Fox,SUB: Fox FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+02:48,2,SPURS,Vassell Free Throw,MISS Vassell Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+02:48,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+02:48,2,SPURS,Vassell Free Throw,Vassell Free Throw 2 of 2 (7 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+02:26,2,THUNDER,Wallace,Wallace 1' Driving Finger Roll Layup (2 PTS) (Gilgeous-Alexander 6 AST),1,Driving Finger Roll Layup,Gilgeous-Alexander,2,0,1,0,0,0,0
+02:14,2,SPURS,Harper,MISS Harper 5' Driving Floating Jump Shot,5,Driving Floating Jump Shot,NA,0,0,0,0,0,0,0
+02:14,2,THUNDER,Wallace REBOUND,Wallace REBOUND (Off:2 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:10,2,THUNDER,Wallace,MISS Wallace 2' Running Layup,2,Running Layup,NA,0,0,0,0,0,0,0
+02:09,2,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:2 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:08,2,THUNDER,Holmgren Tip Layup Shot,Holmgren Tip Layup Shot (8 PTS),NA,Tip Layup Shot,NA,2,0,0,0,0,0,0
+01:52,2,SPURS,Wembanyama Layup,Wembanyama Layup (19 PTS),NA,Layup,NA,2,0,0,0,0,0,0
+01:37,2,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 16' Step Back Jump Shot (10 PTS),16,Step Back Jump Shot,NA,2,0,0,0,0,0,0
+01:12,2,SPURS,Wembanyama,MISS Wembanyama 17' Fadeaway Jumper,17,Fadeaway Jumper,NA,0,0,0,0,0,0,0
+01:10,2,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:2 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:58,2,THUNDER,McCain,MISS McCain 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+00:58,2,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+00:58,2,THUNDER,K Williams L,K. Williams L.B.FOUL (P2.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+00:58,2,SPURS,Vassell Free Throw,Vassell Free Throw 1 of 2 (8 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+00:58,2,SPURS,Castle,SUB: Castle FOR Harper,NA,SUB,NA,0,0,0,0,0,0,0
+00:58,2,THUNDER,J Williams,SUB: J. Williams FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+00:58,2,SPURS,Vassell Free Throw,Vassell Free Throw 2 of 2 (9 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+00:48,2,THUNDER,McCain,MISS McCain 14' Jump Shot,14,Jump Shot,NA,0,0,0,0,0,0,0
+00:44,2,SPURS,Champagnie REBOUND,Champagnie REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:44,2,SPURS,Champagnie,Jump Ball Champagnie vs. Wallace: Tip to Fox,NA,Jump Ball Champagnie vs. Wallace: Tip to Fox,NA,0,0,0,0,0,0,0
+00:30,2,SPURS,Vassell,Vassell 13' Pullup Jump Shot (11 PTS) (Fox 3 AST),13,Pullup Jump Shot,Fox,2,0,1,0,0,0,0
+00:15,2,THUNDER,Wallace,MISS Wallace 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+00:08,2,SPURS,Champagnie REBOUND,Champagnie REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:01,2,SPURS,Wembanyama,Wembanyama 43' 3PT Pullup Jump Shot (22 PTS) (Vassell 2 AST),43,3PT Pullup Jump Shot,Vassell,3,0,1,0,0,0,0
+00:00,2,THUNDER,Instant Replay,Instant Replay2nd Period (9:19 PM EST),NA,Instant Replay2nd Period (9:19 PM EST),NA,0,0,0,0,0,0,0
+11:42,3,THUNDER,Wallace,Wallace 25' 3PT Jump Shot (5 PTS) (Holmgren 2 AST),25,3PT Jump Shot,Holmgren,3,0,1,0,0,0,0
+11:30,3,SPURS,Wembanyama,Wembanyama 1' Alley Oop Layup (24 PTS) (Castle 3 AST),1,Alley Oop Layup,Castle,2,0,1,0,0,0,0
+11:30,3,THUNDER,Dort,Dort S.FOUL (P4.T1) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+11:30,3,THUNDER,Wiggins,SUB: Wiggins FOR Dort,NA,SUB,NA,0,0,0,0,0,0,0
+11:30,3,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 1 of 1 (25 PTS),NA,Free Throw 1 of 1,NA,1,0,0,0,0,0,0
+11:16,3,THUNDER,Hartenstein,MISS Hartenstein 11' Floating Jump Shot,11,Floating Jump Shot,NA,0,0,0,0,0,0,0
+11:14,3,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+11:09,3,SPURS,Castle,Castle 2' Running Layup (7 PTS) (Vassell 3 AST),2,Running Layup,Vassell,2,0,1,0,0,0,0
+10:55,3,THUNDER,Wiggins,MISS Wiggins 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+10:53,3,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:3 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:45,3,SPURS,Castle,Castle 1' Driving Layup (9 PTS) (Champagnie 2 AST),1,Driving Layup,Champagnie,2,0,1,0,0,0,0
+10:45,3,UNKNOWN,Thunder Timeout,Thunder Timeout: Regular (Reg.3 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+10:32,3,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 19' Pullup Jump Shot,19,Pullup Jump Shot,NA,0,0,0,0,0,0,0
+10:32,3,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+10:32,3,SPURS,Castle,Castle L.B.FOUL (P2.T1) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+10:24,3,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 2' Driving Finger Roll Layup (12 PTS) (Hartenstein 2 AST),2,Driving Finger Roll Layup,Hartenstein,2,0,1,0,0,0,0
+09:57,3,SPURS,Wembanyama,MISS Wembanyama 7' Layup,7,Layup,NA,0,0,0,0,0,0,0
+09:55,3,THUNDER,Wiggins REBOUND,Wiggins REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:36,3,THUNDER,Wiggins,MISS Wiggins 15' Pullup Jump Shot,15,Pullup Jump Shot,NA,0,0,0,0,0,0,0
+09:36,3,SPURS,Castle BLOCK,Castle BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+09:35,3,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:2 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:35,3,THUNDER,Hartenstein Turnaround Hook Shot,MISS Hartenstein Turnaround Hook Shot,NA,Turnaround Hook Shot,NA,0,0,0,0,0,0,0
+09:35,3,SPURS,Wembanyama BLOCK,Wembanyama BLOCK (3 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+09:34,3,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+09:34,3,UNKNOWN,Thunder Turnover,Thunder Turnover: Shot Clock (T#10),NA,TURNOVER,NA,0,0,0,0,0,1,0
+09:25,3,SPURS,Castle,MISS Castle 2' Driving Finger Roll Layup,2,Driving Finger Roll Layup,NA,0,0,0,0,0,0,0
+09:23,3,THUNDER,Hartenstein REBOUND,Hartenstein REBOUND (Off:2 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+09:19,3,SPURS,Castle,Castle P.FOUL (P3.T2) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+09:19,3,THUNDER,Caruso,SUB: Caruso FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+09:06,3,THUNDER,Wiggins,MISS Wiggins 24' 3PT Jump Shot,24,3PT Jump Shot,NA,0,0,0,0,0,0,0
+09:02,3,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:6),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:43,3,SPURS,Fox,MISS Fox 4' Driving Floating Jump Shot,4,Driving Floating Jump Shot,NA,0,0,0,0,0,0,0
+08:43,3,THUNDER,Wiggins BLOCK,Wiggins BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+08:41,3,THUNDER,Caruso REBOUND,Caruso REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:37,3,THUNDER,Caruso,MISS Caruso 2' Running Pull-Up Jump Shot,2,Running Pull-Up Jump Shot,NA,0,0,0,0,0,0,0
+08:35,3,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:3 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:26,3,SPURS,Wembanyama,MISS Wembanyama 25' 3PT Pullup Jump Shot,25,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+08:26,3,SPURS,Castle REBOUND,Castle REBOUND (Off:2 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+08:26,3,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander S.FOUL (P2.T2) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+08:26,3,SPURS,Castle Free Throw,Castle Free Throw 1 of 2 (10 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+08:26,3,SPURS,Harper,SUB: Harper FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+08:26,3,SPURS,Barnes,SUB: Barnes FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
+08:26,3,SPURS,Castle Free Throw,Castle Free Throw 2 of 2 (11 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+08:11,3,THUNDER,Hartenstein Lost Ball Turnover,Hartenstein Lost Ball Turnover (P1.T11),NA,TURNOVER,NA,0,0,0,0,0,1,0
+08:11,3,SPURS,Castle STEAL,Castle STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+08:06,3,SPURS,Wembanyama Running Dunk,Wembanyama Running Dunk (27 PTS) (Castle 4 AST),NA,Running Dunk,Castle,2,0,1,0,0,0,0
+07:55,3,THUNDER,Gilgeous-Alexander Lost Ball Turnover,Gilgeous-Alexander Lost Ball Turnover (P3.T12),NA,TURNOVER,NA,0,0,0,0,0,1,0
+07:55,3,SPURS,Barnes STEAL,Barnes STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+07:48,3,THUNDER,Caruso,Caruso S.FOUL (P4.T3) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+07:48,3,SPURS,Barnes Free Throw,Barnes Free Throw 1 of 2 (2 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+07:48,3,THUNDER,J Williams,SUB: J. Williams FOR Wiggins,NA,SUB,NA,0,0,0,0,0,0,0
+07:48,3,THUNDER,McCain,SUB: McCain FOR Wallace,NA,SUB,NA,0,0,0,0,0,0,0
+07:48,3,THUNDER,Holmgren,SUB: Holmgren FOR Hartenstein,NA,SUB,NA,0,0,0,0,0,0,0
+07:48,3,SPURS,Barnes Free Throw,Barnes Free Throw 2 of 2 (3 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+07:29,3,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 18' Pullup Jump Shot,18,Pullup Jump Shot,NA,0,0,0,0,0,0,0
+07:27,3,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:3 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:21,3,THUNDER,Holmgren Bad Pass Turnover,Holmgren Bad Pass Turnover (P3.T13),NA,TURNOVER,NA,0,0,0,0,0,1,0
+07:21,3,SPURS,Vassell STEAL,Vassell STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+07:17,3,SPURS,Castle Running Alley Oop Dunk Shot,Castle Running Alley Oop Dunk Shot (13 PTS) (Harper 2 AST),NA,Running Alley Oop Dunk Shot,Harper,2,0,1,0,0,0,0
+07:17,3,UNKNOWN,Thunder Timeout,Thunder Timeout: Regular (Reg.4 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+06:58,3,THUNDER,Holmgren,MISS Holmgren 24' 3PT Jump Shot,24,3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:54,3,SPURS,Harper REBOUND,Harper REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:45,3,SPURS,Castle,MISS Castle 26' 3PT Jump Shot,26,3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:43,3,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+06:24,3,THUNDER,Holmgren,MISS Holmgren 17' Turnaround Fadeaway Shot,17,Turnaround Fadeaway Shot,NA,0,0,0,0,0,0,0
+06:24,3,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+06:24,3,SPURS,Barnes,Barnes L.B.FOUL (P1.T3) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+06:19,3,SPURS,Castle,Castle S.FOUL (P4.T4) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+06:19,3,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 1 of 2 (13 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+06:19,3,SPURS,Fox,SUB: Fox FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+06:19,3,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 2 of 2 (14 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+06:03,3,SPURS,Barnes,MISS Barnes 4' Driving Hook Shot,4,Driving Hook Shot,NA,0,0,0,0,0,0,0
+06:01,3,THUNDER,Caruso REBOUND,Caruso REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:57,3,THUNDER,J Williams,MISS J. Williams 3PT Running Jump Shot,NA,Williams 3PT Running Jump Shot,NA,0,0,0,0,0,0,0
+05:54,3,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:7),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:39,3,SPURS,Fox,Fox 26' 3PT Jump Shot (5 PTS) (Wembanyama 4 AST),26,3PT Jump Shot,Wembanyama,3,0,1,0,0,0,0
+05:30,3,THUNDER,McCain Out,McCain Out of Bounds Lost Ball Turnover (P2.T14),NA,TURNOVER,NA,0,0,0,0,0,1,0
+05:21,3,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander S.FOUL (P3.T4) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+05:21,3,SPURS,Vassell Free Throw,Vassell Free Throw 1 of 2 (12 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+05:21,3,SPURS,Kornet,SUB: Kornet FOR Wembanyama,NA,SUB,NA,0,0,0,0,0,0,0
+05:21,3,SPURS,Bryant,SUB: Bryant FOR Barnes,NA,SUB,NA,0,0,0,0,0,0,0
+05:21,3,THUNDER,Joe,SUB: Joe FOR Caruso,NA,SUB,NA,0,0,0,0,0,0,0
+05:21,3,SPURS,Vassell Free Throw,Vassell Free Throw 2 of 2 (13 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+05:09,3,SPURS,Bryant,Bryant S.FOUL (P2.PN) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+05:09,3,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 1 of 2 (15 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+05:09,3,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 2 of 2 (16 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+05:01,3,SPURS,Fox,MISS Fox 9' Driving Floating Jump Shot,9,Driving Floating Jump Shot,NA,0,0,0,0,0,0,0
+04:57,3,THUNDER,Gilgeous-Alexander REBOUND,Gilgeous-Alexander REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:38,3,THUNDER,J Williams,MISS J. Williams 26' 3PT Jump Shot,26,Williams 26' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+04:36,3,SPURS,Bryant REBOUND,Bryant REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:29,3,SPURS,Vassell,MISS Vassell 24' 3PT Jump Shot,24,3PT Jump Shot,NA,0,0,0,0,0,0,0
+04:27,3,SPURS,Harper REBOUND,Harper REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:26,3,SPURS,Harper Putback Layup,Harper Putback Layup (3 PTS),NA,Putback Layup,NA,2,0,0,0,0,0,0
+04:07,3,THUNDER,Holmgren,MISS Holmgren 4' Layup,4,Layup,NA,0,0,0,0,0,0,0
+04:04,3,SPURS,Fox REBOUND,Fox REBOUND (Off:1 Def:8),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:01,3,SPURS,Bryant Offensive Charge Foul,Bryant Offensive Charge Foul (P3) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+04:01,3,SPURS,Bryant Offensive Foul Turnover,Bryant Offensive Foul Turnover (P1.T7),NA,TURNOVER,NA,0,0,0,0,0,1,1
+04:01,3,SPURS,Champagnie,SUB: Champagnie FOR Harper,NA,SUB,NA,0,0,0,0,0,0,0
+03:54,3,SPURS,Bryant,Bryant P.FOUL (P4.PN) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+03:54,3,THUNDER,McCain Free Throw,McCain Free Throw 1 of 2 (1 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+03:54,3,THUNDER,McCain Free Throw,McCain Free Throw 2 of 2 (2 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+03:34,3,SPURS,Fox,MISS Fox 12' Step Back Jump Shot,12,Step Back Jump Shot,NA,0,0,0,0,0,0,0
+03:32,3,THUNDER,Gilgeous-Alexander REBOUND,Gilgeous-Alexander REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:28,3,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 1' Running Finger Roll Layup (18 PTS),1,Running Finger Roll Layup,NA,2,0,0,0,0,0,0
+03:28,3,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 3 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+03:28,3,SPURS,Johnson,SUB: Johnson FOR Bryant,NA,SUB,NA,0,0,0,0,0,0,0
+03:17,3,SPURS,Champagnie,MISS Champagnie 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:14,3,THUNDER,Joe REBOUND,Joe REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+03:14,3,SPURS,Fox Transition Take Foul,Fox Transition Take Foul (P2.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+03:14,3,THUNDER,Instant Replay,Instant Replay3rd Period (10:04 PM EST),NA,Instant Replay3rd Period (10:04 PM EST),NA,0,0,0,0,0,0,0
+03:14,3,THUNDER,Gilgeous-Alexander Free Throw,Gilgeous-Alexander Free Throw 1 of 1 (19 PTS),NA,Free Throw 1 of 1,NA,1,0,0,0,0,0,0
+03:14,3,SPURS,Wembanyama,SUB: Wembanyama FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+03:14,3,SPURS,Barnes,SUB: Barnes FOR Vassell,NA,SUB,NA,0,0,0,0,0,0,0
+03:02,3,THUNDER,Joe,MISS Joe 27' 3PT Jump Shot,27,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:00,3,SPURS,Champagnie REBOUND,Champagnie REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:54,3,SPURS,Johnson,MISS Johnson 3' Running Layup,3,Running Layup,NA,0,0,0,0,0,0,0
+02:54,3,THUNDER,Joe BLOCK,Joe BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+02:51,3,SPURS,Fox REBOUND,Fox REBOUND (Off:2 Def:8),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:41,3,SPURS,Wembanyama Bad Pass Turnover,Wembanyama Bad Pass Turnover (P2.T8),NA,TURNOVER,NA,0,0,0,0,0,1,0
+02:41,3,THUNDER,Gilgeous-Alexander STEAL,Gilgeous-Alexander STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+02:36,3,THUNDER,J Williams,MISS J. Williams 26' 3PT Jump Shot,26,Williams 26' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+02:32,3,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+02:32,3,THUNDER,K Williams,SUB: K. Williams FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+02:25,3,THUNDER,McCain,McCain 1' Driving Finger Roll Layup (4 PTS) (J. Williams 1 AST),1,Driving Finger Roll Layup,J. Williams,2,0,1,0,0,0,0
+02:15,3,SPURS,Fox,Fox 1' Driving Layup (7 PTS) (Wembanyama 5 AST),1,Driving Layup,Wembanyama,2,0,1,0,0,0,0
+02:06,3,THUNDER,Gilgeous-Alexander Lost Ball Turnover,Gilgeous-Alexander Lost Ball Turnover (P4.T15),NA,TURNOVER,NA,0,0,0,0,0,1,0
+02:06,3,SPURS,Fox STEAL,Fox STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+02:00,3,SPURS,Wembanyama,MISS Wembanyama 3' Running Alley Oop Dunk Shot,3,Running Alley Oop Dunk Shot,NA,0,0,0,0,0,0,0
+01:59,3,SPURS,Barnes REBOUND,Barnes REBOUND (Off:2 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+01:51,3,THUNDER,K Williams P,K. Williams P.FOUL (P3.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+01:51,3,SPURS,Wembanyama Free Throw,MISS Wembanyama Free Throw 1 of 2,NA,Free Throw 1 of 2,NA,0,0,0,0,0,0,0
+01:51,3,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+01:51,3,SPURS,Wembanyama Free Throw,Wembanyama Free Throw 2 of 2 (28 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+01:34,3,THUNDER,J Williams,MISS J. Williams 26' 3PT Jump Shot,26,Williams 26' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+01:34,3,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+01:27,3,SPURS,Wembanyama,Wembanyama 27' 3PT Jump Shot (31 PTS) (Fox 4 AST),27,3PT Jump Shot,Fox,3,0,1,0,0,0,0
+01:05,3,THUNDER,K Williams,K. Williams 3PT Jump Shot (3 PTS) (Joe 1 AST),NA,Williams 3PT Jump Shot,Joe,3,0,1,0,0,0,0
+00:48,3,SPURS,Barnes,MISS Barnes 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+00:46,3,THUNDER,Joe REBOUND,Joe REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:35,3,THUNDER,K Williams,K. Williams 3PT Jump Shot (6 PTS) (Gilgeous-Alexander 7 AST),NA,Williams 3PT Jump Shot,Gilgeous-Alexander,3,0,1,0,0,0,0
+00:15,3,SPURS,Johnson,MISS Johnson 24' 3PT Jump Shot,24,3PT Jump Shot,NA,0,0,0,0,0,0,0
+00:12,3,THUNDER,McCain REBOUND,McCain REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:03,3,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 25' 3PT Step Back Jump Shot,25,3PT Step Back Jump Shot,NA,0,0,0,0,0,0,0
+00:01,3,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:3 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:01,3,SPURS,Wembanyama Lost Ball Turnover,Wembanyama Lost Ball Turnover (P3.T9),NA,TURNOVER,NA,0,0,0,0,0,1,0
+00:01,3,THUNDER,Joe STEAL,Joe STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+00:00,3,THUNDER,Instant Replay,Instant Replay3rd Period (10:15 PM EST),NA,Instant Replay3rd Period (10:15 PM EST),NA,0,0,0,0,0,0,0
+11:35,4,SPURS,Johnson,Johnson 2' Driving Layup (4 PTS) (Castle 5 AST),2,Driving Layup,Castle,2,0,1,0,0,0,0
+11:15,4,THUNDER,McCain,MISS McCain 2' Driving Finger Roll Layup,2,Driving Finger Roll Layup,NA,0,0,0,0,0,0,0
+11:14,4,SPURS,Wembanyama REBOUND,Wembanyama REBOUND (Off:3 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+11:10,4,SPURS,Vassell,MISS Vassell 25' 3PT Running Jump Shot,25,3PT Running Jump Shot,NA,0,0,0,0,0,0,0
+11:10,4,THUNDER,K Williams REBOUND,K. Williams REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:55,4,THUNDER,McCain,MISS McCain 25' 3PT Pullup Jump Shot,25,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+10:51,4,THUNDER,Dort REBOUND,Dort REBOUND (Off:2 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:48,4,THUNDER,Joe,MISS Joe 26' 3PT Jump Shot,26,3PT Jump Shot,NA,0,0,0,0,0,0,0
+10:46,4,SPURS,Barnes REBOUND,Barnes REBOUND (Off:2 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:40,4,THUNDER,McCain,McCain P.FOUL (P2.T1) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+10:35,4,THUNDER,Hartenstein,Hartenstein P.FOUL (P3.T2) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+10:35,4,THUNDER,Wiggins,SUB: Wiggins FOR McCain,NA,SUB,NA,0,0,0,0,0,0,0
+10:26,4,SPURS,Barnes,MISS Barnes 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
+10:26,4,THUNDER,Joe REBOUND,Joe REBOUND (Off:0 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+10:26,4,THUNDER,Joe Lost Ball Turnover,Joe Lost Ball Turnover (P1.T16),NA,TURNOVER,NA,0,0,0,0,0,1,0
+10:26,4,SPURS,Johnson STEAL,Johnson STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+10:24,4,THUNDER,Wiggins,Wiggins S.FOUL (P1.T3) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+10:24,4,SPURS,Barnes Free Throw,Barnes Free Throw 1 of 2 (4 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+10:24,4,SPURS,Barnes Free Throw,Barnes Free Throw 2 of 2 (5 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+10:05,4,THUNDER,Wiggins Lost Ball Turnover,Wiggins Lost Ball Turnover (P1.T17),NA,TURNOVER,NA,0,0,0,0,0,1,0
+10:05,4,SPURS,Wembanyama STEAL,Wembanyama STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+10:00,4,SPURS,Wembanyama,Wembanyama 1' Running Dunk (33 PTS) (Castle 6 AST),1,Running Dunk,Castle,2,0,1,0,0,0,0
+09:38,4,THUNDER,Dort,Dort 12' Pullup Jump Shot (2 PTS) (Hartenstein 3 AST),12,Pullup Jump Shot,Hartenstein,2,0,1,0,0,0,0
+09:21,4,SPURS,Johnson,MISS Johnson 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+09:19,4,SPURS,SPURS Rebound,SPURS Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+09:19,4,SPURS,Johnson,Jump Ball Johnson vs. Hartenstein: Tip to Barnes,NA,Jump Ball Johnson vs. Hartenstein: Tip to Barnes,NA,0,0,0,0,0,0,0
+09:11,4,SPURS,Wembanyama Bad Pass Turnover,Wembanyama Bad Pass Turnover (P4.T10),NA,TURNOVER,NA,0,0,0,0,0,1,0
+09:11,4,THUNDER,Joe STEAL,Joe STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+09:02,4,THUNDER,Wiggins,Wiggins 15' Step Back Jump Shot (2 PTS) (Joe 2 AST),15,Step Back Jump Shot,Joe,2,0,1,0,0,0,0
+08:43,4,THUNDER,K Williams P,K. Williams P.FOUL (P4.T4) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+08:43,4,SPURS,Kornet,SUB: Kornet FOR Wembanyama,NA,SUB,NA,0,0,0,0,0,0,0
+08:43,4,SPURS,Fox,SUB: Fox FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+08:43,4,SPURS,Harper,SUB: Harper FOR Barnes,NA,SUB,NA,0,0,0,0,0,0,0
+08:43,4,THUNDER,Wallace,SUB: Wallace FOR Joe,NA,SUB,NA,0,0,0,0,0,0,0
+08:43,4,THUNDER,Holmgren,SUB: Holmgren FOR Hartenstein,NA,SUB,NA,0,0,0,0,0,0,0
+08:32,4,SPURS,Fox,Fox 11' Step Back Jump Shot (9 PTS),11,Step Back Jump Shot,NA,2,0,0,0,0,0,0
+08:18,4,THUNDER,Wiggins,MISS Wiggins 4' Driving Layup,4,Driving Layup,NA,0,0,0,0,0,0,0
+08:18,4,SPURS,Fox BLOCK,Fox BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+08:18,4,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+08:15,4,SPURS,Fox,Fox S.FOUL (P3.T1) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+08:15,4,THUNDER,Holmgren Free Throw,Holmgren Free Throw 1 of 2 (9 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+08:15,4,THUNDER,Holmgren Free Throw,Holmgren Free Throw 2 of 2 (10 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+07:55,4,SPURS,Fox,MISS Fox 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+07:53,4,SPURS,Kornet REBOUND,Kornet REBOUND (Off:2 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:53,4,SPURS,Kornet Tip Layup Shot,MISS Kornet Tip Layup Shot,NA,Tip Layup Shot,NA,0,0,0,0,0,0,0
+07:52,4,THUNDER,Dort REBOUND,Dort REBOUND (Off:2 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:41,4,THUNDER,K Williams,MISS K. Williams 25' 3PT Jump Shot,25,Williams 25' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+07:36,4,SPURS,Harper REBOUND,Harper REBOUND (Off:1 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:30,4,SPURS,Johnson,MISS Johnson 23' Jump Shot,23,Jump Shot,NA,0,0,0,0,0,0,0
+07:26,4,THUNDER,K Williams REBOUND,K. Williams REBOUND (Off:0 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+07:08,4,THUNDER,Wiggins,Wiggins 19' Pullup Jump Shot (4 PTS) (K. Williams 1 AST),19,Pullup Jump Shot,K. Williams,2,0,1,0,0,0,0
+07:08,4,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 4 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+07:08,4,SPURS,Champagnie,SUB: Champagnie FOR Johnson,NA,SUB,NA,0,0,0,0,0,0,0
+07:08,4,SPURS,Castle,SUB: Castle FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+06:52,4,SPURS,Castle,MISS Castle 2' Driving Layup,2,Driving Layup,NA,0,0,0,0,0,0,0
+06:50,4,THUNDER,Holmgren REBOUND,Holmgren REBOUND (Off:3 Def:6),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:43,4,THUNDER,Holmgren,MISS Holmgren 5' Layup,5,Layup,NA,0,0,0,0,0,0,0
+06:43,4,SPURS,Kornet BLOCK,Kornet BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+06:43,4,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+06:37,4,THUNDER,K Williams,MISS K. Williams 25' 3PT Jump Shot,25,Williams 25' 3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:32,4,SPURS,Kornet REBOUND,Kornet REBOUND (Off:2 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:29,4,THUNDER,Wallace,Wallace P.FOUL (P1.PN) (S.Foster),NA,FOUL,NA,0,0,0,0,0,0,1
+06:29,4,SPURS,Harper Free Throw,Harper Free Throw 1 of 2 (4 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+06:29,4,THUNDER,J Williams,SUB: J. Williams FOR Holmgren,NA,SUB,NA,0,0,0,0,0,0,0
+06:29,4,THUNDER,Joe,SUB: Joe FOR Wallace,NA,SUB,NA,0,0,0,0,0,0,0
+06:29,4,SPURS,Harper Free Throw,Harper Free Throw 2 of 2 (5 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+06:17,4,THUNDER,Dort,MISS Dort 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+06:14,4,SPURS,Vassell REBOUND,Vassell REBOUND (Off:0 Def:6),NA,REBOUND,NA,0,1,0,0,0,0,0
+06:06,4,SPURS,Harper Lost Ball Turnover,Harper Lost Ball Turnover (P2.T11),NA,TURNOVER,NA,0,0,0,0,0,1,0
+06:06,4,THUNDER,Dort STEAL,Dort STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+06:01,4,THUNDER,Wiggins,MISS Wiggins 25' 3PT Running Pull-Up Jump Shot,25,3PT Running Pull-Up Jump Shot,NA,0,0,0,0,0,0,0
+06:00,4,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+06:00,4,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 5 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+06:00,4,THUNDER,Instant Replay,Instant Replay4th Period (10:35 PM EST),NA,Instant Replay4th Period (10:35 PM EST),NA,0,0,0,0,0,0,0
+05:51,4,THUNDER,Joe,MISS Joe 26' 3PT Step Back Jump Shot,26,3PT Step Back Jump Shot,NA,0,0,0,0,0,0,0
+05:49,4,THUNDER,J Williams REBOUND,J. Williams REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:44,4,THUNDER,Wiggins,MISS Wiggins 9' Driving Floating Bank Jump Shot,9,Driving Floating Bank Jump Shot,NA,0,0,0,0,0,0,0
+05:41,4,UNKNOWN,Thunder Rebound,Thunder Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
+05:41,4,SPURS,Castle,Castle L.B.FOUL (P5.T2) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+05:41,4,SPURS,Fox,SUB: Fox FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
+05:37,4,THUNDER,Wiggins,MISS Wiggins 26' 3PT Jump Shot,26,3PT Jump Shot,NA,0,0,0,0,0,0,0
+05:35,4,SPURS,Harper REBOUND,Harper REBOUND (Off:1 Def:3),NA,REBOUND,NA,0,1,0,0,0,0,0
+05:16,4,SPURS,Kornet,Kornet 1' Alley Oop Dunk (6 PTS) (Fox 5 AST),1,Alley Oop Dunk,Fox,2,0,1,0,0,0,0
+05:04,4,SPURS,Kornet,Kornet S.FOUL (P1.T3) (C.Blair),NA,FOUL,NA,0,0,0,0,0,0,1
+05:04,4,THUNDER,K Williams Free,K. Williams Free Throw 1 of 2 (7 PTS),NA,Williams Free Throw 1 of 2,NA,1,0,0,0,0,0,0
+05:04,4,THUNDER,K Williams Free,K. Williams Free Throw 2 of 2 (8 PTS),NA,Williams Free Throw 2 of 2,NA,1,0,0,0,0,0,0
+04:46,4,SPURS,Fox,MISS Fox 17' Pullup Jump Shot,17,Pullup Jump Shot,NA,0,0,0,0,0,0,0
+04:43,4,THUNDER,K Williams REBOUND,K. Williams REBOUND (Off:0 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:36,4,THUNDER,Wiggins,MISS Wiggins 2' Cutting Layup Shot,2,Cutting Layup Shot,NA,0,0,0,0,0,0,0
+04:34,4,SPURS,Kornet REBOUND,Kornet REBOUND (Off:2 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:21,4,SPURS,Harper,Harper 1' Driving Dunk (7 PTS),1,Driving Dunk,NA,2,0,0,0,0,0,0
+04:08,4,THUNDER,K Williams,MISS K. Williams 1' Driving Layup,1,Williams 1' Driving Layup,NA,0,0,0,0,0,0,0
+04:08,4,SPURS,Kornet BLOCK,Kornet BLOCK (2 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+04:07,4,SPURS,Harper REBOUND,Harper REBOUND (Off:1 Def:4),NA,REBOUND,NA,0,1,0,0,0,0,0
+04:01,4,SPURS,Vassell Bad Pass Turnover,Vassell Bad Pass Turnover (P1.T12),NA,TURNOVER,NA,0,0,0,0,0,1,0
+04:01,4,THUNDER,K Williams STEAL,K. Williams STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+03:57,4,THUNDER,Joe,Joe 25' 3PT Running Jump Shot (6 PTS) (K. Williams 2 AST),25,3PT Running Jump Shot,K. Williams,3,0,1,0,0,0,0
+03:45,4,SPURS,Fox,Fox 8' Driving Floating Bank Jump Shot (11 PTS),8,Driving Floating Bank Jump Shot,NA,2,0,0,0,0,0,0
+03:45,4,THUNDER,Dort,Dort S.FOUL (P5.PN) (N.Buchert),NA,FOUL,NA,0,0,0,0,0,0,1
+03:45,4,SPURS,Johnson,SUB: Johnson FOR Harper,NA,SUB,NA,0,0,0,0,0,0,0
+03:45,4,SPURS,Bryant,SUB: Bryant FOR Vassell,NA,SUB,NA,0,0,0,0,0,0,0
+03:45,4,SPURS,McLaughlin,SUB: McLaughlin FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
+03:45,4,THUNDER,Topic,SUB: Topic FOR Dort,NA,SUB,NA,0,0,0,0,0,0,0
+03:45,4,UNKNOWN,Thunder Timeout,Thunder Timeout: Regular (Reg.5 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+03:45,4,SPURS,Fox Free Throw,Fox Free Throw 1 of 1 (12 PTS),NA,Free Throw 1 of 1,NA,1,0,0,0,0,0,0
+03:33,4,THUNDER,Joe,Joe 2' Driving Layup (8 PTS) (Topic 1 AST),2,Driving Layup,Topic,2,0,1,0,0,0,0
+03:32,4,SPURS,SPURS Timeout,SPURS Timeout: Regular (Full 6 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
+03:32,4,SPURS,Olynyk,SUB: Olynyk FOR Fox,NA,SUB,NA,0,0,0,0,0,0,0
+03:32,4,SPURS,Waters,SUB: Waters III FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+03:10,4,SPURS,Johnson,MISS Johnson 26' 3PT Jump Shot,26,3PT Jump Shot,NA,0,0,0,0,0,0,0
+03:07,4,THUNDER,J Williams REBOUND,J. Williams REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:57,4,THUNDER,Topic,MISS Topic 3' Driving Layup,3,Driving Layup,NA,0,0,0,0,0,0,0
+02:57,4,SPURS,Bryant BLOCK,Bryant BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
+02:54,4,SPURS,Olynyk REBOUND,Olynyk REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:44,4,SPURS,Olynyk,MISS Olynyk 14' Turnaround Jump Shot,14,Turnaround Jump Shot,NA,0,0,0,0,0,0,0
+02:43,4,SPURS,McLaughlin REBOUND,McLaughlin REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:41,4,SPURS,Olynyk,MISS Olynyk 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
+02:41,4,THUNDER,K Williams REBOUND,K. Williams REBOUND (Off:0 Def:5),NA,REBOUND,NA,0,1,0,0,0,0,0
+02:24,4,THUNDER,Wiggins Lost Ball Turnover,Wiggins Lost Ball Turnover (P2.T18),NA,TURNOVER,NA,0,0,0,0,0,1,0
+02:24,4,SPURS,Olynyk STEAL,Olynyk STEAL (1 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+02:11,4,SPURS,Johnson,Johnson 1' Driving Layup (6 PTS),1,Driving Layup,NA,2,0,0,0,0,0,0
+01:58,4,THUNDER,Topic Lost Ball Turnover,Topic Lost Ball Turnover (P1.T19),NA,TURNOVER,NA,0,0,0,0,0,1,0
+01:58,4,SPURS,Olynyk STEAL,Olynyk STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+01:54,4,SPURS,McLaughlin,McLaughlin 24' 3PT Running Jump Shot (3 PTS) (Bryant 1 AST),24,3PT Running Jump Shot,Bryant,3,0,1,0,0,0,0
+01:38,4,THUNDER,K Williams Lost,K. Williams Lost Ball Turnover (P1.T20),NA,TURNOVER,NA,0,0,0,0,0,1,0
+01:38,4,SPURS,Olynyk STEAL,Olynyk STEAL (3 STL),NA,STEAL,NA,0,0,0,1,0,0,0
+01:30,4,SPURS,Johnson,MISS Johnson 26' 3PT Running Jump Shot,26,3PT Running Jump Shot,NA,0,0,0,0,0,0,0
+01:30,4,THUNDER,J Williams REBOUND,J. Williams REBOUND (Off:1 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+01:13,4,THUNDER,Joe,Joe 3PT Step Back Jump Shot (11 PTS),NA,3PT Step Back Jump Shot,NA,3,0,0,0,0,0,0
+01:01,4,SPURS,McLaughlin,MISS McLaughlin 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0
+00:59,4,THUNDER,Wiggins REBOUND,Wiggins REBOUND (Off:0 Def:2),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:56,4,THUNDER,Topic,Topic 2' Running Layup (2 PTS) (K. Williams 3 AST),2,Running Layup,K. Williams,2,0,1,0,0,0,0
+00:39,4,SPURS,Olynyk,Olynyk 25' 3PT Jump Shot (3 PTS) (Waters III 1 AST),25,3PT Jump Shot,Waters III,3,0,1,0,0,0,0
+00:28,4,THUNDER,K Williams,K. Williams 1' Cutting Layup Shot (10 PTS) (Topic 2 AST),1,Williams 1' Cutting Layup Shot,Topic,2,0,1,0,0,0,0
+00:04,4,SPURS,SPURS Turnover,SPURS Turnover: Shot Clock (T#13),NA,TURNOVER,NA,0,0,0,0,0,1,0
