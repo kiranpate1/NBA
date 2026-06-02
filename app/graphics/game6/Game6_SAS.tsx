@@ -14,7 +14,7 @@ export default function Game6_SAS() {
             transform="translate(354, 290)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -25,7 +25,7 @@ export default function Game6_SAS() {
             transform="translate(58.999999999999986, 226)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -36,7 +36,7 @@ export default function Game6_SAS() {
             transform="translate(386, 271)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -45,7 +45,7 @@ export default function Game6_SAS() {
             transform="translate(268, 72)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -54,7 +54,7 @@ export default function Game6_SAS() {
             transform="translate(210.99999999999997, 300)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -63,7 +63,7 @@ export default function Game6_SAS() {
             transform="translate(16.999999999999993, 37)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -72,7 +72,7 @@ export default function Game6_SAS() {
             transform="translate(331, 87)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -81,7 +81,7 @@ export default function Game6_SAS() {
             transform="translate(259, 133)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -90,7 +90,7 @@ export default function Game6_SAS() {
             transform="translate(183, 308)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -99,7 +99,7 @@ export default function Game6_SAS() {
             transform="translate(250, 93)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -108,7 +108,7 @@ export default function Game6_SAS() {
             transform="translate(359, 279)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -117,7 +117,7 @@ export default function Game6_SAS() {
             transform="translate(392, 259)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -128,7 +128,7 @@ export default function Game6_SAS() {
             transform="translate(388.00000000000006, 268)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -139,7 +139,7 @@ export default function Game6_SAS() {
             transform="translate(312, 298)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -150,7 +150,7 @@ export default function Game6_SAS() {
             transform="translate(261, 302)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -161,7 +161,7 @@ export default function Game6_SAS() {
             transform="translate(425, 234)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -170,7 +170,7 @@ export default function Game6_SAS() {
             transform="translate(223, 135)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -179,7 +179,7 @@ export default function Game6_SAS() {
             transform="translate(248, 201)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -191,7 +191,7 @@ export default function Game6_SAS() {
             transform="translate(301, 66)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -200,7 +200,7 @@ export default function Game6_SAS() {
             transform="translate(257, 54.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -212,7 +212,7 @@ export default function Game6_SAS() {
             transform="translate(294, 308)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -221,7 +221,7 @@ export default function Game6_SAS() {
             transform="translate(11.999999999999993, 43.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -232,7 +232,7 @@ export default function Game6_SAS() {
             transform="translate(373, 149)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -244,7 +244,7 @@ export default function Game6_SAS() {
             transform="translate(239, 56)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -253,7 +253,7 @@ export default function Game6_SAS() {
             transform="translate(142, 302)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -262,7 +262,7 @@ export default function Game6_SAS() {
             transform="translate(409, 261)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -271,7 +271,7 @@ export default function Game6_SAS() {
             transform="translate(248, 81.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -280,7 +280,7 @@ export default function Game6_SAS() {
             transform="translate(284, 301)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -289,7 +289,7 @@ export default function Game6_SAS() {
             transform="translate(252, 137)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -298,7 +298,7 @@ export default function Game6_SAS() {
             transform="translate(363, 65)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -307,7 +307,7 @@ export default function Game6_SAS() {
             transform="translate(53.00000000000001, 212)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -316,7 +316,7 @@ export default function Game6_SAS() {
             transform="translate(480, 53)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -325,7 +325,7 @@ export default function Game6_SAS() {
             transform="translate(33.999999999999986, 193.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -334,7 +334,7 @@ export default function Game6_SAS() {
             transform="translate(237, 48)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -346,7 +346,7 @@ export default function Game6_SAS() {
             transform="translate(282, 101)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -357,7 +357,7 @@ export default function Game6_SAS() {
             transform="translate(191, 186)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -366,7 +366,7 @@ export default function Game6_SAS() {
             transform="translate(324, 166)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -375,7 +375,7 @@ export default function Game6_SAS() {
             transform="translate(373, 271)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -384,7 +384,7 @@ export default function Game6_SAS() {
             transform="translate(483, 92.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -393,7 +393,7 @@ export default function Game6_SAS() {
             transform="translate(252, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -402,7 +402,7 @@ export default function Game6_SAS() {
             transform="translate(462, 198)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -413,7 +413,7 @@ export default function Game6_SAS() {
             transform="translate(199, 297)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -422,7 +422,7 @@ export default function Game6_SAS() {
             transform="translate(402, 270)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -431,7 +431,7 @@ export default function Game6_SAS() {
             transform="translate(241, 76)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -440,7 +440,7 @@ export default function Game6_SAS() {
             transform="translate(158, 184.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -449,7 +449,7 @@ export default function Game6_SAS() {
             transform="translate(250, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -460,7 +460,7 @@ export default function Game6_SAS() {
             transform="translate(55, 230.99999999999997)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -469,7 +469,7 @@ export default function Game6_SAS() {
             transform="translate(109, 282)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -481,7 +481,7 @@ export default function Game6_SAS() {
             transform="translate(255, 87.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -490,7 +490,7 @@ export default function Game6_SAS() {
             transform="translate(6.999999999999993, 129)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -501,7 +501,7 @@ export default function Game6_SAS() {
             transform="translate(16.000000000000014, 70)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -512,7 +512,7 @@ export default function Game6_SAS() {
             transform="translate(360, 291)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -521,7 +521,7 @@ export default function Game6_SAS() {
             transform="translate(255, 124)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -532,7 +532,7 @@ export default function Game6_SAS() {
             transform="translate(248, 66)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -543,7 +543,7 @@ export default function Game6_SAS() {
             transform="translate(266, 63)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -554,7 +554,7 @@ export default function Game6_SAS() {
             transform="translate(275, 261)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -565,7 +565,7 @@ export default function Game6_SAS() {
             transform="translate(271, 87)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -574,7 +574,7 @@ export default function Game6_SAS() {
             transform="translate(311, 123)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -586,7 +586,7 @@ export default function Game6_SAS() {
             transform="translate(229, 71)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -595,7 +595,7 @@ export default function Game6_SAS() {
             transform="translate(382, 276)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -604,7 +604,7 @@ export default function Game6_SAS() {
             transform="translate(469, 180)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -613,7 +613,7 @@ export default function Game6_SAS() {
             transform="translate(312, 96)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -622,7 +622,7 @@ export default function Game6_SAS() {
             transform="translate(482, 59.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -631,7 +631,7 @@ export default function Game6_SAS() {
             transform="translate(250, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -640,7 +640,7 @@ export default function Game6_SAS() {
             transform="translate(259, 163)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -649,7 +649,7 @@ export default function Game6_SAS() {
             transform="translate(183, 81.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -658,7 +658,7 @@ export default function Game6_SAS() {
             transform="translate(330, 145)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -669,7 +669,7 @@ export default function Game6_SAS() {
             transform="translate(38.999999999999986, 205)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -678,7 +678,7 @@ export default function Game6_SAS() {
             transform="translate(6.999999999999993, 112)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -689,7 +689,7 @@ export default function Game6_SAS() {
             transform="translate(248, 65)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -698,7 +698,7 @@ export default function Game6_SAS() {
             transform="translate(478, 83)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -709,7 +709,7 @@ export default function Game6_SAS() {
             transform="translate(260, 56)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -718,7 +718,7 @@ export default function Game6_SAS() {
             transform="translate(16.000000000000014, 66)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -727,7 +727,7 @@ export default function Game6_SAS() {
             transform="translate(235, 63)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -736,7 +736,7 @@ export default function Game6_SAS() {
             transform="translate(235, 65)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -745,7 +745,7 @@ export default function Game6_SAS() {
             transform="translate(277, 71)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -754,7 +754,7 @@ export default function Game6_SAS() {
             transform="translate(248, 136)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -763,7 +763,7 @@ export default function Game6_SAS() {
             transform="translate(482, 94)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -775,7 +775,7 @@ export default function Game6_SAS() {
             transform="translate(237.99999999999997, 131)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -784,7 +784,7 @@ export default function Game6_SAS() {
             transform="translate(11.999999999999993, 67)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -795,7 +795,7 @@ export default function Game6_SAS() {
             transform="translate(282, 62)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -804,7 +804,7 @@ export default function Game6_SAS() {
             transform="translate(255, 115)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -815,7 +815,7 @@ export default function Game6_SAS() {
             transform="translate(261, 65)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -827,7 +827,7 @@ export default function Game6_SAS() {
             transform="translate(175, 99)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -836,7 +836,7 @@ export default function Game6_SAS() {
             transform="translate(11.999999999999993, 113)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -845,7 +845,7 @@ export default function Game6_SAS() {
             transform="translate(41.99999999999999, 224)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -854,7 +854,7 @@ export default function Game6_SAS() {
             transform="translate(275, 149)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -863,7 +863,7 @@ export default function Game6_SAS() {
             transform="translate(248, 134)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
       </g>

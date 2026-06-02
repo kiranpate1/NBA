@@ -12,7 +12,7 @@ export default function Game4_SAS() {
             transform="translate(381, 165)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -23,7 +23,7 @@ export default function Game4_SAS() {
             transform="translate(402, 274)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -32,7 +32,7 @@ export default function Game4_SAS() {
             transform="translate(273, 298)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -41,7 +41,7 @@ export default function Game4_SAS() {
             transform="translate(221, 302)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -52,7 +52,7 @@ export default function Game4_SAS() {
             transform="translate(224.00000000000003, 170)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -61,7 +61,7 @@ export default function Game4_SAS() {
             transform="translate(154, 54.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -72,7 +72,7 @@ export default function Game4_SAS() {
             transform="translate(250, 59.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -81,7 +81,7 @@ export default function Game4_SAS() {
             transform="translate(129, 270)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -92,7 +92,7 @@ export default function Game4_SAS() {
             transform="translate(254, 58)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -104,7 +104,7 @@ export default function Game4_SAS() {
             transform="translate(245, 101)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -113,7 +113,7 @@ export default function Game4_SAS() {
             transform="translate(482, 72)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -124,7 +124,7 @@ export default function Game4_SAS() {
             transform="translate(36.000000000000014, 180)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -135,7 +135,7 @@ export default function Game4_SAS() {
             transform="translate(462, 190)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -147,7 +147,7 @@ export default function Game4_SAS() {
             transform="translate(248, 54.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -156,7 +156,7 @@ export default function Game4_SAS() {
             transform="translate(21.000000000000014, 40)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -165,7 +165,7 @@ export default function Game4_SAS() {
             transform="translate(26.000000000000014, 38)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -174,7 +174,7 @@ export default function Game4_SAS() {
             transform="translate(293, 174)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -183,7 +183,7 @@ export default function Game4_SAS() {
             transform="translate(248, 58.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -194,7 +194,7 @@ export default function Game4_SAS() {
             transform="translate(26.000000000000014, 77)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -203,7 +203,7 @@ export default function Game4_SAS() {
             transform="translate(278, 63)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -212,7 +212,7 @@ export default function Game4_SAS() {
             transform="translate(343, 213)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -221,7 +221,7 @@ export default function Game4_SAS() {
             transform="translate(261, 138)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -230,7 +230,7 @@ export default function Game4_SAS() {
             transform="translate(16.000000000000014, 39)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -239,7 +239,7 @@ export default function Game4_SAS() {
             transform="translate(201, 120.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -248,7 +248,7 @@ export default function Game4_SAS() {
             transform="translate(265, 54.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -257,7 +257,7 @@ export default function Game4_SAS() {
             transform="translate(233, 54.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -266,7 +266,7 @@ export default function Game4_SAS() {
             transform="translate(353, 74)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -275,7 +275,7 @@ export default function Game4_SAS() {
             transform="translate(281, 55)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -284,7 +284,7 @@ export default function Game4_SAS() {
             transform="translate(243, 229)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -293,7 +293,7 @@ export default function Game4_SAS() {
             transform="translate(26.999999999999993, 166.99999999999997)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -302,7 +302,7 @@ export default function Game4_SAS() {
             transform="translate(194.00000000000003, 55)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -311,7 +311,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -320,7 +320,7 @@ export default function Game4_SAS() {
             transform="translate(235, 55)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -329,7 +329,7 @@ export default function Game4_SAS() {
             transform="translate(207, 297)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -338,7 +338,7 @@ export default function Game4_SAS() {
             transform="translate(401, 253.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -347,7 +347,7 @@ export default function Game4_SAS() {
             transform="translate(265, 53)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -356,7 +356,7 @@ export default function Game4_SAS() {
             transform="translate(489, 72)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -365,7 +365,7 @@ export default function Game4_SAS() {
             transform="translate(265, 51.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -374,7 +374,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -383,7 +383,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -392,7 +392,7 @@ export default function Game4_SAS() {
             transform="translate(241, 97.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -401,7 +401,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -410,7 +410,7 @@ export default function Game4_SAS() {
             transform="translate(401, 120.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -421,7 +421,7 @@ export default function Game4_SAS() {
             transform="translate(251, 177)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -433,7 +433,7 @@ export default function Game4_SAS() {
             transform="translate(252, 470)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -444,7 +444,7 @@ export default function Game4_SAS() {
             transform="translate(241, 56)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -455,7 +455,7 @@ export default function Game4_SAS() {
             transform="translate(272, 55)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -466,7 +466,7 @@ export default function Game4_SAS() {
             transform="translate(261, 51.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -475,7 +475,7 @@ export default function Game4_SAS() {
             transform="translate(305, 93)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -484,7 +484,7 @@ export default function Game4_SAS() {
             transform="translate(235, 58)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -493,7 +493,7 @@ export default function Game4_SAS() {
             transform="translate(249, 94)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -502,7 +502,7 @@ export default function Game4_SAS() {
             transform="translate(450, 202)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -513,7 +513,7 @@ export default function Game4_SAS() {
             transform="translate(252, 51.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -525,7 +525,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -534,7 +534,7 @@ export default function Game4_SAS() {
             transform="translate(434, 228.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -543,7 +543,7 @@ export default function Game4_SAS() {
             transform="translate(288, 51.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -554,7 +554,7 @@ export default function Game4_SAS() {
             transform="translate(176, 301)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -563,7 +563,7 @@ export default function Game4_SAS() {
             transform="translate(218.99999999999997, 136)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -572,7 +572,7 @@ export default function Game4_SAS() {
             transform="translate(8.999999999999986, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -581,7 +581,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -590,7 +590,7 @@ export default function Game4_SAS() {
             transform="translate(212, 161.00000000000003)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -599,7 +599,7 @@ export default function Game4_SAS() {
             transform="translate(16.999999999999993, 29.999999999999996)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -608,7 +608,7 @@ export default function Game4_SAS() {
             transform="translate(275, 43.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -619,7 +619,7 @@ export default function Game4_SAS() {
             transform="translate(259, 46.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -630,7 +630,7 @@ export default function Game4_SAS() {
             transform="translate(275, 48.99999999999999)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -641,7 +641,7 @@ export default function Game4_SAS() {
             transform="translate(401, 278)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -650,7 +650,7 @@ export default function Game4_SAS() {
             transform="translate(482, 46.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -659,7 +659,7 @@ export default function Game4_SAS() {
             transform="translate(457, 178)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -670,7 +670,7 @@ export default function Game4_SAS() {
             transform="translate(228, 48.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -679,7 +679,7 @@ export default function Game4_SAS() {
             transform="translate(452, 205)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -688,7 +688,7 @@ export default function Game4_SAS() {
             transform="translate(480, 57.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -699,7 +699,7 @@ export default function Game4_SAS() {
             transform="translate(239, 51.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -708,7 +708,7 @@ export default function Game4_SAS() {
             transform="translate(271, 51.00000000000001)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -717,7 +717,7 @@ export default function Game4_SAS() {
             transform="translate(230, 157)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -726,7 +726,7 @@ export default function Game4_SAS() {
             transform="translate(183, 298)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -735,7 +735,7 @@ export default function Game4_SAS() {
             transform="translate(250, 50)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -744,7 +744,7 @@ export default function Game4_SAS() {
             transform="translate(188, 273)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -753,7 +753,7 @@ export default function Game4_SAS() {
             transform="translate(232.00000000000003, 62)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -762,7 +762,7 @@ export default function Game4_SAS() {
             transform="translate(240, 59.99999999999999)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -771,7 +771,7 @@ export default function Game4_SAS() {
             transform="translate(150, 192)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -780,7 +780,7 @@ export default function Game4_SAS() {
             transform="translate(248, 57.00000000000001)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -791,7 +791,7 @@ export default function Game4_SAS() {
             transform="translate(175, 35)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -800,7 +800,7 @@ export default function Game4_SAS() {
             transform="translate(70, 234)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -809,7 +809,7 @@ export default function Game4_SAS() {
             transform="translate(237, 192)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -818,7 +818,7 @@ export default function Game4_SAS() {
             transform="translate(261, 301)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -827,7 +827,7 @@ export default function Game4_SAS() {
             transform="translate(263, 55)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -839,7 +839,7 @@ export default function Game4_SAS() {
             transform="translate(11.000000000000014, 37)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
         <g className="shot">
@@ -848,7 +848,7 @@ export default function Game4_SAS() {
             transform="translate(464.00000000000006, 197)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -857,7 +857,7 @@ export default function Game4_SAS() {
             transform="translate(246.00000000000003, 306)"
             d="M -5,-5 L 5,5 M 5,-5 L -5,5"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(187, 0, 0, 0.8)"
+            stroke="var(--miss)"
           ></path>
         </g>
         <g className="shot">
@@ -868,7 +868,7 @@ export default function Game4_SAS() {
             transform="translate(70, 225)"
             d="M -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0"
             fill="rgba(255,255,255, 0.1)"
-            stroke="rgba(56, 100, 251, 0.9)"
+            stroke="var(--make)"
           ></path>
         </g>
       </g>

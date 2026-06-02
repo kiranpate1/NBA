@@ -99,16 +99,16 @@ time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,ste
 01:55,1,THUNDER,Holmgren,Holmgren REBOUND (Off:0 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
 01:45,1,THUNDER,Holmgren,Holmgren 23' Jump Shot (2 PTS) (Wallace 1 AST),23,Jump Shot,Wallace,2,0,1,0,0,0,0
 01:34,1,THUNDER,Gilgeous-Alexander,SUB: Gilgeous-Alexander FOR Jal. Williams,NA,SUB,NA,0,0,0,0,0,0,0
-01:34,1,UNKNOWN,McLaughlin,SUB: McLaughlin FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+01:34,1,SPURS,McLaughlin,SUB: McLaughlin FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
 01:34,1,SPURS,Wembanyama,SUB: Wembanyama FOR Bryant,NA,SUB,NA,0,0,0,0,0,0,0
 01:23,1,SPURS,Harper,Harper Lost Ball Turnover (P1.T4),NA,TURNOVER,NA,0,0,0,0,0,1,0
 01:23,1,THUNDER,McCain,McCain STEAL (2 STL),NA,STEAL,NA,0,0,0,1,0,0,0
 01:16,1,THUNDER,Wallace,Wallace 3PT Jump Shot (3 PTS) (Gilgeous-Alexander 2 AST),NA,3PT Jump Shot,Gilgeous-Alexander,3,0,1,0,0,0,0
-01:02,1,UNKNOWN,McLaughlin,McLaughlin 27' 3PT Step Back Jump Shot (3 PTS) (Champagnie 2 AST),27,3PT Step Back Jump Shot,Champagnie,3,0,1,0,0,0,0
+01:02,1,SPURS,McLaughlin,McLaughlin 27' 3PT Step Back Jump Shot (3 PTS) (Champagnie 2 AST),27,3PT Step Back Jump Shot,Champagnie,3,0,1,0,0,0,0
 00:47,1,THUNDER,McCain,McCain 13' Pullup Jump Shot (3 PTS) (Gilgeous-Alexander 3 AST),13,Pullup Jump Shot,Gilgeous-Alexander,2,0,1,0,0,0,0
 00:42,1,SPURS,Johnson,MISS Johnson 1' Driving Layup,1,Driving Layup,NA,0,0,0,0,0,0,0
 00:42,1,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander BLOCK (1 BLK),NA,BLOCK,NA,0,0,0,0,1,0,0
-00:39,1,UNKNOWN,McLaughlin,McLaughlin REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
+00:39,1,SPURS,McLaughlin,McLaughlin REBOUND (Off:1 Def:0),NA,REBOUND,NA,0,1,0,0,0,0,0
 00:29,1,SPURS,Champagnie,Champagnie 27' 3PT Jump Shot (5 PTS) (Harper 3 AST),27,3PT Jump Shot,Harper,3,0,1,0,0,0,0
 00:16,1,THUNDER,McCain,MISS McCain 25' 3PT Jump Shot,25,3PT Jump Shot,NA,0,0,0,0,0,0,0
 00:14,1,THUNDER,Holmgren,Holmgren REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
@@ -147,7 +147,7 @@ time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,ste
 10:19,2,SPURS,Wembanyama,Wembanyama REBOUND (Off:1 Def:1),NA,REBOUND,NA,0,1,0,0,0,0,0
 10:19,2,SPURS,Wembanyama,Wembanyama Tip Layup Shot (5 PTS),NA,Tip Layup Shot,NA,2,0,0,0,0,0,0
 10:09,2,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 13' Pullup Jump Shot (8 PTS),13,Pullup Jump Shot,NA,2,0,0,0,0,0,0
-10:09,2,UNKNOWN,McLaughlin,McLaughlin S.FOUL (P1.T3) (T.Brothers),NA,FOUL,NA,0,0,0,0,0,0,1
+10:09,2,SPURS,McLaughlin,McLaughlin S.FOUL (P1.T3) (T.Brothers),NA,FOUL,NA,0,0,0,0,0,0,1
 10:09,2,THUNDER,Wallace,SUB: Wallace FOR Mitchell,NA,SUB,NA,0,0,0,0,0,0,0
 10:09,2,SPURS,Harper,SUB: Harper FOR McLaughlin,NA,SUB,NA,0,0,0,0,0,0,0
 10:09,2,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander Free Throw 1 of 1 (9 PTS),NA,Free Throw 1 of 1,NA,1,0,0,0,0,0,0
@@ -354,13 +354,13 @@ time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,ste
 02:56,3,SPURS,Timeout:,Spurs Timeout: Regular (Reg.4 Short 0),NA,TIMEOUT,NA,0,0,0,0,0,0,0
 02:56,3,SPURS,Wembanyama,SUB: Wembanyama FOR Johnson,NA,SUB,NA,0,0,0,0,0,0,0
 02:56,3,SPURS,Champagnie,SUB: Champagnie FOR Castle,NA,SUB,NA,0,0,0,0,0,0,0
-02:56,3,UNKNOWN,McLaughlin,SUB: McLaughlin FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
+02:56,3,SPURS,McLaughlin,SUB: McLaughlin FOR Kornet,NA,SUB,NA,0,0,0,0,0,0,0
 02:56,3,SPURS,Barnes,SUB: Barnes FOR Bryant,NA,SUB,NA,0,0,0,0,0,0,0
 02:40,3,THUNDER,Caruso,Caruso S.FOUL (P1.PN) (K.Lane),NA,FOUL,NA,0,0,0,0,0,0,1
 02:40,3,SPURS,Barnes,Barnes Free Throw 1 of 2 (1 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
 02:40,3,SPURS,Barnes,Barnes Free Throw 2 of 2 (2 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
 02:29,3,THUNDER,Holmgren,Holmgren 1' Alley Oop Dunk (12 PTS) (Caruso 3 AST),1,Alley Oop Dunk,Caruso,2,0,1,0,0,0,0
-02:08,3,UNKNOWN,McLaughlin,McLaughlin 24' 3PT Jump Shot (6 PTS) (Wembanyama 5 AST),24,3PT Jump Shot,Wembanyama,3,0,1,0,0,0,0
+02:08,3,SPURS,McLaughlin,McLaughlin 24' 3PT Jump Shot (6 PTS) (Wembanyama 5 AST),24,3PT Jump Shot,Wembanyama,3,0,1,0,0,0,0
 01:49,3,THUNDER,Mitchell,Mitchell 2' Reverse Layup (8 PTS) (Caruso 4 AST),2,Reverse Layup,Caruso,2,0,1,0,0,0,0
 01:33,3,SPURS,Champagnie,Champagnie 3' Driving Floating Jump Shot (7 PTS) (Vassell 1 AST),3,Driving Floating Jump Shot,Vassell,2,0,1,0,0,0,0
 01:21,3,THUNDER,McCain,MISS McCain 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
@@ -378,10 +378,10 @@ time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,ste
 00:37,3,SPURS,Wembanyama,Wembanyama Lost Ball Turnover (P4.T16),NA,TURNOVER,NA,0,0,0,0,0,1,0
 00:37,3,SPURS,Wembanyama,Wembanyama L.B.FOUL (P3.T4) (K.Lane),NA,FOUL,NA,0,0,0,0,0,0,1
 00:30,3,THUNDER,Gilgeous-Alexander,Gilgeous-Alexander 13' Pullup Jump Shot (24 PTS),13,Pullup Jump Shot,NA,2,0,0,0,0,0,0
-00:21,3,UNKNOWN,McLaughlin,McLaughlin Bad Pass Turnover (P1.T17),NA,TURNOVER,NA,0,0,0,0,0,1,0
+00:21,3,SPURS,McLaughlin,McLaughlin Bad Pass Turnover (P1.T17),NA,TURNOVER,NA,0,0,0,0,0,1,0
 00:21,3,THUNDER,Wallace,Wallace STEAL (4 STL),NA,STEAL,NA,0,0,0,1,0,0,0
 00:05,3,THUNDER,McCain,McCain 25' 3PT Jump Shot (6 PTS) (Gilgeous-Alexander 9 AST),25,3PT Jump Shot,Gilgeous-Alexander,3,0,1,0,0,0,0
-00:00,3,UNKNOWN,McLaughlin,MISS McLaughlin 23' Pullup Jump Shot,23,Pullup Jump Shot,NA,0,0,0,0,0,0,0
+00:00,3,SPURS,McLaughlin,MISS McLaughlin 23' Pullup Jump Shot,23,Pullup Jump Shot,NA,0,0,0,0,0,0,0
 00:00,3,SPURS,Rebound,Spurs Rebound,NA,REBOUND,NA,0,1,0,0,0,0,0
 11:44,4,SPURS,Castle,Castle 1' Reverse Layup (20 PTS) (Wembanyama 6 AST),1,Reverse Layup,Wembanyama,2,0,1,0,0,0,0
 11:29,4,THUNDER,McCain,MISS McCain 3PT Jump Shot,NA,3PT Jump Shot,NA,0,0,0,0,0,0,0
@@ -424,7 +424,7 @@ time,quarter,team,player,play,distance,result,assist,points,rebounds,assists,ste
 07:33,4,SPURS,Bryant,SUB: Bryant FOR Barnes,NA,SUB,NA,0,0,0,0,0,0,0
 07:22,4,SPURS,Champagnie,Champagnie S.FOUL (P2.T4) (K.Lane),NA,FOUL,NA,0,0,0,0,0,0,1
 07:22,4,THUNDER,Caruso,Caruso Free Throw 1 of 2 (14 PTS),NA,Free Throw 1 of 2,NA,1,0,0,0,0,0,0
-07:22,4,UNKNOWN,McLaughlin,SUB: McLaughlin FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
+07:22,4,SPURS,McLaughlin,SUB: McLaughlin FOR Champagnie,NA,SUB,NA,0,0,0,0,0,0,0
 07:22,4,THUNDER,Caruso,Caruso Free Throw 2 of 2 (15 PTS),NA,Free Throw 2 of 2,NA,1,0,0,0,0,0,0
 07:15,4,SPURS,Castle,Castle Backcourt Turnover (P8.T19),NA,TURNOVER,NA,0,0,0,0,0,1,0
 07:04,4,THUNDER,Gilgeous-Alexander,MISS Gilgeous-Alexander 26' 3PT Pullup Jump Shot,26,3PT Pullup Jump Shot,NA,0,0,0,0,0,0,0

@@ -5,7 +5,9 @@ type props = {
 
 export default function GameGrid({ isInsideSticky, ot }: props) {
   const regulationMinutes = 48;
-  const overtimeMinutes = (ot ?? 0) * 5;
+  const overtimeCount = ot ?? 0;
+  const overtimeMinutes = overtimeCount * 5;
+  const hasOvertime = overtimeCount > 0;
 
   return (
     <div
@@ -51,12 +53,12 @@ export default function GameGrid({ isInsideSticky, ot }: props) {
         <div className="w-full h-0 border-b border-(--stroke) border-dotted"></div>
         <div className="relative w-full h-0 border-b border-(--stroke)">
           <small className="absolute bottom-0.75 left-1">
-            {ot ? `END REG` : "END"}
+            {hasOvertime ? "END REG" : "END"}
           </small>
           <small className="absolute bottom-0.75 right-1">
-            {ot ? `REG END` : "END"}
+            {hasOvertime ? "REG END" : "END"}
           </small>
-          {ot && (
+          {hasOvertime && (
             <>
               <small className="absolute top-1 left-1">{`05:00 OT1`}</small>
               <small className="absolute top-1 right-1">{`OT1 05:00`}</small>
@@ -64,11 +66,11 @@ export default function GameGrid({ isInsideSticky, ot }: props) {
           )}
         </div>
       </div>
-      <div className="w-full flex flex-col items-stretch justify-between">
-        <div className=""></div>
-        {ot &&
-          Array.from({ length: ot }, (_, i) => {
-            const isFinalOt = i === ot - 1;
+      {hasOvertime && (
+        <div className="w-full flex flex-col items-stretch justify-between">
+          <div></div>
+          {Array.from({ length: overtimeCount }, (_, i) => {
+            const isFinalOt = i === overtimeCount - 1;
 
             return (
               <div
@@ -90,7 +92,8 @@ export default function GameGrid({ isInsideSticky, ot }: props) {
               </div>
             );
           })}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

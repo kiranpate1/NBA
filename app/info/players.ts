@@ -12,22 +12,28 @@ export const spursPlayers = [
     imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630169.png",
   },
   {
+    name: "De'Aaron Fox",
+    position: "Guard",
+    number: 4,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629634.png",
+  },
+  {
     name: "Stephon Castle",
     position: "Guard",
     number: 5,
     imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630170.png",
   },
   {
-    name: "Devin Vassell",
-    position: "Forward",
-    number: 24,
-    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630171.png",
-  },
-  {
     name: "Julian Champagnie",
     position: "Forward",
     number: 30,
     imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630172.png",
+  },
+  {
+    name: "Devin Vassell",
+    position: "Forward",
+    number: 24,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630171.png",
   },
   {
     name: "Keldon Johnson",
@@ -52,6 +58,36 @@ export const spursPlayers = [
     position: "Center",
     number: 7,
     imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630176.png",
+  },
+  {
+    name: "Bismack Biyombo",
+    position: "Center",
+    number: 18,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629635.png",
+  },
+  {
+    name: "Mason Plumlee",
+    position: "Forward",
+    number: 45,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630177.png",
+  },
+  {
+    name: "Kelly Olynyk",
+    position: "Center",
+    number: 8,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629636.png",
+  },
+  {
+    name: "Lindy Waters III",
+    position: "Guard",
+    number: 43,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630178.png",
+  },
+  {
+    name: "Jordan McLaughlin",
+    position: "Guard",
+    number: 0,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629637.png",
   },
 ];
 
@@ -127,5 +163,17 @@ export const thunderPlayers = [
     position: "Guard",
     number: 11,
     imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629633.png",
+  },
+  {
+    name: "Nikola Topić",
+    position: "Guard",
+    number: 44,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1630185.png",
+  },
+  {
+    name: "Kenrich Williams",
+    position: "Forward",
+    number: 34,
+    imageUrl: "https://cdn.nba.com/headshots/nba/latest/260x190/1629634.png",
   },
 ];

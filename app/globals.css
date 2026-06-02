@@ -47,8 +47,7 @@ small {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -75,6 +74,7 @@ h3.gameclock {
 }
 
 h4 {
+  font-family: "Geist Mono", monospace;
   font-size: 18px;
 }
 
@@ -82,7 +82,7 @@ p {
   font-family: var(--font-sans), sans-serif;
   font-size: 14px;
 }
-.boxscores p {
+p.smaller {
   font-size: 12px;
 }
 
