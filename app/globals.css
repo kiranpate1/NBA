@@ -66,6 +66,21 @@ h3 {
   font-size: 32px;
 }
 
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .scoreboard {
+    bottom: 24px !important;
+  }
+}
+
 h3.gameclock {
   font-family: "Geist Mono", monospace;
   font-optical-sizing: auto;
@@ -122,5 +137,10 @@ small {
 .okc_courts svg g {
   transform-origin: center;
   transform-box: fill-box;
-  transition: all 0.2s ease;
+  transition: all 0.12s ease;
+}
+
+.court g path {
+  stroke-width: 2px;
+  fill: rgba(255, 255, 255, 0.75);
 }

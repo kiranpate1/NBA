@@ -29,6 +29,7 @@ import Game4Spread from "./graphics/game4/Game4Spread";
 import Game5Spread from "./graphics/game5/Game5Spread";
 import Game6Spread from "./graphics/game6/Game6Spread";
 import Game7Spread from "./graphics/game7/Game7Spread";
+import BoxScore from "./components/BoxScore";
 
 type CourtGraphicComponent = React.ComponentType;
 type SpreadGraphicComponent = React.ComponentType<{ spread: number }>;
@@ -252,7 +253,7 @@ const getDefaultGameSeconds = (otCount: number) => (48 + otCount * 5) * 60;
 
 export default function Home() {
   const courtHeight = 160;
-  const gameScroll = 400; // in vh, regulation 48 minutes
+  const gameScroll = 300; // in vh, regulation 48 minutes
   const topLipHeight = 80;
   const playBoundaryRef = useRef<HTMLDivElement | null>(null);
   const OKCPlayRef = useRef<HTMLDivElement | null>(null);
@@ -299,9 +300,54 @@ export default function Home() {
   );
   const [activeGameIndex, setActiveGameIndex] = useState(0);
   const [hasReachedBottom, setHasReachedBottom] = useState(false);
+  const [activeCourtUrl, setActiveCourtUrl] = useState<string | null>(null);
+  const [displayedCourtUrl, setDisplayedCourtUrl] = useState<string | null>(
+    null,
+  );
+  const [isCourtVisible, setIsCourtVisible] = useState(false);
+  const courtTransitionRef = useRef<number | null>(null);
   const activeGameVisual = gameVisuals[activeGameIndex] ?? gameVisuals[0];
   const ActiveSASCourt = activeGameVisual.sasCourt;
   const ActiveOKCCourt = activeGameVisual.okcCourt;
+
+  useEffect(() => {
+    if (courtTransitionRef.current !== null) {
+      window.clearTimeout(courtTransitionRef.current);
+      courtTransitionRef.current = null;
+    }
+
+    if (activeCourtUrl) {
+      setDisplayedCourtUrl(activeCourtUrl);
+      setIsCourtVisible(true);
+      return;
+    }
+
+    setIsCourtVisible(false);
+    courtTransitionRef.current = window.setTimeout(() => {
+      setDisplayedCourtUrl(null);
+      courtTransitionRef.current = null;
+    }, 380);
+
+    return () => {
+      if (courtTransitionRef.current !== null) {
+        window.clearTimeout(courtTransitionRef.current);
+        courtTransitionRef.current = null;
+      }
+    };
+  }, [activeCourtUrl]);
+
+  const scrollToGameStart = (gameIndex: number) => {
+    const targetEl = gameScrollRefs[gameIndex]?.current;
+    if (!targetEl) return;
+
+    const top =
+      targetEl.getBoundingClientRect().top +
+      window.scrollY -
+      topLipHeight * 2 -
+      courtHeight -
+      0;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
 
   useEffect(() => {
     let isMounted = true;
@@ -581,9 +627,7 @@ export default function Home() {
         gameSecondsByGame[activeIndex] ??
         getDefaultGameSeconds(games[activeIndex]?.ot ?? 0);
       const isSeriesBottom =
-        isInsideAnyScroll &&
-        activeIndex === games.length - 1 &&
-        scrolledPx >= rect.height;
+        activeIndex === games.length - 1 && scrolledPx >= rect.height;
 
       if (activeIndex !== lastGameIndex) {
         lastZone = null;
@@ -595,6 +639,9 @@ export default function Home() {
       setHasReachedBottom((prev) =>
         prev === isSeriesBottom ? prev : isSeriesBottom,
       );
+      setActiveCourtUrl(
+        isInsideAnyScroll ? (games[activeIndex]?.courtImageUrl ?? null) : null,
+      );
 
       if (!isInsideAnyScroll) {
         if (lastZone === "between") return;
@@ -604,16 +651,17 @@ export default function Home() {
         if (scrolledPx > rect.height) {
           const activePlays = playsByGame[activeIndex] ?? [];
           const finalSecond = Math.max(0, Math.floor(totalSeconds));
-          const finalScore = computeSnapshot(activePlays, finalSecond).score;
+          const finalSnapshot = computeSnapshot(activePlays, finalSecond);
+          setBoxStats(finalSnapshot.boxStats);
           setTeamScoreByGame((prev) => {
             const next = [...prev];
-            next[activeIndex] = finalScore;
+            next[activeIndex] = finalSnapshot.score;
             return next;
           });
         }
 
         if (gameClockRef.current) gameClockRef.current.textContent = "00:00";
-        if (quarterRef.current) quarterRef.current.textContent = "";
+        if (quarterRef.current) quarterRef.current.textContent = "END";
         okcEl.innerHTML = "&ensp;";
         sasEl.innerHTML = "&ensp;";
         // setBoxStats({
@@ -757,14 +805,17 @@ export default function Home() {
     <main className="">
       <div
         className="relative z-4 w-full bg-(--background)"
-        style={{ height: `100dvh` }}
+        style={{ height: `100dvh`, padding: topLipHeight - 17 }}
       >
-        <div className="w-full h-full grid grid-cols-2 p-4">
+        <div className="w-full h-full grid grid-cols-2 border border-(--stroke)">
           {/* use text effect from your codepen, both animating from center */}
           <div className="place-self-center flex flex-col items-center text-(--okc)">
             <p>Oklahoma City Thunder</p>
             <h1>OKC</h1>
             <small>64-18</small>
+          </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <h3>VS.</h3>
           </div>
           <div className="place-self-center flex flex-col items-center text-(--sas)">
             <p>San Antonio Spurs</p>
@@ -781,18 +832,14 @@ export default function Home() {
         >
           <div className="sticky z-2 top-0 w-full h-0">
             <div
-              className="absolute z-10 top-4 left-1/2 -translate-x-1/2 w-full max-w-[975px] grid border-t border-b border-(--stroke) bg-(--background) duration-200 ease-in-out pointer-events-auto"
+              className="absolute z-10 top-0 xl:top-4 left-1/2 -translate-x-1/2 w-full max-w-[975px] max-h-10 xl:max-h-none grid grid-cols-7 border-[0.5px] border-(--stroke) bg-(--background) duration-200 ease-in-out pointer-events-auto"
               style={{
                 height: topLipHeight - 17,
-                gridTemplateColumns: hasReachedBottom
-                  ? "1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr"
-                  : "0fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",
               }}
             >
-              <div className="flex items-center justify-center border-r border-(--stroke) overflow-hidden">
-                All
-              </div>
               {games.map((game, i) => {
+                const progress = progressByGame[i] ?? 0;
+                const isActiveGame = progress > 0 && progress < 1;
                 const score = teamScoreByGame[i] ?? makeEmptyTeamScore();
                 const progressColor =
                   score.OKC > score.SAS
@@ -800,16 +847,19 @@ export default function Home() {
                     : score.SAS > score.OKC
                       ? "var(--sas)"
                       : "var(--stroke)";
+                const navBackgroundColor = isActiveGame
+                  ? `color-mix(in srgb, var(--background) 88%, ${progressColor} 12%)`
+                  : "var(--background)";
 
                 return (
-                  <div
-                    className="flex flex-col items-stretch border-r border-(--stroke) overflow-hidden"
+                  <button
+                    type="button"
+                    className="flex flex-col items-stretch border-[0.5px] border-(--stroke) overflow-hidden cursor-pointer transition-colors duration-150"
                     key={i}
+                    onClick={() => scrollToGameStart(i)}
+                    style={{ backgroundColor: navBackgroundColor }}
                   >
-                    <div className="flex-1 flex items-center justify-center">
-                      <h4 className="text-(--stroke)">{i + 1}</h4>
-                    </div>
-                    <div className="h-2 overflow-hidden">
+                    <div className="h-2 xl:h-3 overflow-hidden p-0 xl:p-0.5">
                       <div
                         className="h-full"
                         style={{
@@ -823,7 +873,22 @@ export default function Home() {
                         }}
                       ></div>
                     </div>
-                  </div>
+                    <div className="flex-1 flex items-center justify-center px-4">
+                      <img
+                        src="/thunder-logo.svg"
+                        alt="OKC logo"
+                        className="hidden sm:block flex-1 h-4"
+                        style={{ opacity: score.OKC > score.SAS ? 1 : 0.15 }}
+                      />
+                      <h4 className="text-(--stroke)">{i + 1}</h4>
+                      <img
+                        src="/spurs-logo.svg"
+                        alt="SAS logo"
+                        className="hidden sm:block flex-1 h-4"
+                        style={{ opacity: score.SAS > score.OKC ? 1 : 0.15 }}
+                      />
+                    </div>
+                  </button>
                 );
               })}
             </div>
@@ -891,152 +956,68 @@ export default function Home() {
                     className="absolute inset-[0_0_auto_0] border-b border-(--stroke) bg-(--background) grid grid-cols-2 gap-2 py-1 pointer-events-auto"
                     ref={playBoundaryRef}
                   >
-                    <small className="text-right" ref={OKCPlayRef}>
+                    <small
+                      className="text-right overflow-hidden whitespace-nowrap text-ellipsis"
+                      ref={OKCPlayRef}
+                    >
                       Example of OKC play
                     </small>
-                    <small className="text-left" ref={SASPlayRef}>
+                    <small
+                      className="text-left overflow-hidden whitespace-nowrap text-ellipsis"
+                      ref={SASPlayRef}
+                    >
                       Example of SAS play
                     </small>
                   </div>
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                  <div className="absolute z-1 top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
                     <h3
                       className="gameclock pointer-events-auto"
                       ref={gameClockRef}
                     >
                       12:00
                     </h3>
-                    <small ref={quarterRef}>Q1</small>
+                    <small className="bg-(--background)" ref={quarterRef}>
+                      Q1
+                    </small>
                   </div>
                   <div
-                    className="absolute top-0 left-1/2 -translate-x-1/2 w-px bg-(--stroke)"
+                    className="absolute top-0 left-1/2 -translate-x-1/2 w-px bg-(--stroke) opacity-50"
                     style={{ height: topLipHeight }}
                   ></div>
                   <div
-                    className="relative border border-(--stroke) bg-(--background) max-h-[calc((100dvw*50/94)-120px)]"
+                    className="relative border border-(--stroke) bg-(--background)"
                     ref={courtHeightDynamicRef}
                     style={{ height: courtHeight }}
                   >
                     <div
-                      className="absolute bottom-[calc(100vh-96px)] xl:bottom-auto xl:top-0 w-[calc(50dvw-16px)] xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll pointer-events-auto"
+                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll"
                       style={{
                         transform: `translate(-100%, -${topLipHeight - 17}px)`,
                         left: -topLipHeight + 19,
                         height: courtHeight + topLipHeight - 18,
+                        pointerEvents: hasReachedBottom ? "none" : "auto",
                       }}
                     >
-                      <div className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] h-6.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]">
-                        <small className="self-center justify-self-start">
-                          Player
-                        </small>
-                        <small className="place-self-center">PTS</small>
-                        <small className="place-self-center">FG</small>
-                        <small className="place-self-center">REB</small>
-                        <small className="place-self-center">AST</small>
-                        <small className="place-self-center">3PT</small>
-                        <small className="place-self-center">STL</small>
-                        <small className="place-self-center">BLK</small>
-                      </div>
-                      {thunderPlayers.map((player, i) => (
-                        <div
-                          className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] py-0.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]"
-                          key={i}
-                        >
-                          <p className="smaller self-center justify-self-start">
-                            {player.name[0]}. {player.name.split(" ")[1]}&ensp;
-                            {i < 5 && (
-                              <span style={{ opacity: 0.5 }}>
-                                {player.position[0]}
-                              </span>
-                            )}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.OKC[player.name]?.pts ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {(boxStats.OKC[player.name]?.fgMade ?? 0) +
-                              "-" +
-                              (boxStats.OKC[player.name]?.fgAtt ?? 0)}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.OKC[player.name]?.reb ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.OKC[player.name]?.ast ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {(boxStats.OKC[player.name]?.threePtMade ?? 0) +
-                              "-" +
-                              (boxStats.OKC[player.name]?.threePtAtt ?? 0)}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.OKC[player.name]?.stl ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.OKC[player.name]?.blk ?? 0}
-                          </p>
-                        </div>
-                      ))}
+                      <BoxScore
+                        team="OKC"
+                        players={thunderPlayers}
+                        boxStats={boxStats}
+                      />
                     </div>
                     <div
-                      className="absolute bottom-[calc(100vh-96px)] xl:bottom-auto xl:top-0 w-[calc(50dvw-16px)] xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-scroll pointer-events-auto"
+                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll"
                       style={{
                         transform: `translate(100%, -${topLipHeight - 17}px)`,
                         right: -topLipHeight + 19,
                         height: courtHeight + topLipHeight - 18,
+                        pointerEvents: hasReachedBottom ? "none" : "auto",
                       }}
                     >
-                      <div className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] h-6.5 pl-1.5 border-b border-(--stroke) text-(--stroke)">
-                        <small className="self-center justify-self-start">
-                          Player
-                        </small>
-                        <small className="place-self-center">PTS</small>
-                        <small className="place-self-center">FG</small>
-                        <small className="place-self-center">REB</small>
-                        <small className="place-self-center">AST</small>
-                        <small className="place-self-center">3PT</small>
-                        <small className="place-self-center">STL</small>
-                        <small className="place-self-center">BLK</small>
-                      </div>
-                      {spursPlayers.map((player, i) => (
-                        <div
-                          className="grid grid-cols-[1fr_32px_40px_32px_32px_32px_32px_32px] py-0.5 pl-1.5 border-b border-(--stroke) text-(--stroke) min-w-[380px]"
-                          key={i}
-                        >
-                          <p className="smaller self-center justify-self-start">
-                            {player.name[0]}. {player.name.split(" ")[1]}&ensp;
-                            {i < 5 && (
-                              <span style={{ opacity: 0.5 }}>
-                                {player.position[0]}
-                              </span>
-                            )}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.SAS[player.name]?.pts ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {(boxStats.SAS[player.name]?.fgMade ?? 0) +
-                              "-" +
-                              (boxStats.SAS[player.name]?.fgAtt ?? 0)}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.SAS[player.name]?.reb ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.SAS[player.name]?.ast ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {(boxStats.SAS[player.name]?.threePtMade ?? 0) +
-                              "-" +
-                              (boxStats.SAS[player.name]?.threePtAtt ?? 0)}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.SAS[player.name]?.stl ?? 0}
-                          </p>
-                          <p className="smaller place-self-center">
-                            {boxStats.SAS[player.name]?.blk ?? 0}
-                          </p>
-                        </div>
-                      ))}
+                      <BoxScore
+                        team="SAS"
+                        players={spursPlayers}
+                        boxStats={boxStats}
+                      />
                     </div>
                     <div className="absolute z-1 inset-0 pointer-events-auto">
                       <div
@@ -1076,7 +1057,7 @@ export default function Home() {
                         )}
                       </div>
                     </div>
-                    <Court />
+                    <Court court={displayedCourtUrl} visible={isCourtVisible} />
                   </div>
                 </div>
               </div>
@@ -1111,7 +1092,7 @@ export default function Home() {
                 >
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-(--stroke)"></div>
                   <GameGrid isInsideSticky={false} ot={game.ot} />
-                  <SpreadGraphic spread={10} />
+                  <SpreadGraphic spread={game.spread} />
                 </div>
                 <GameRecap
                   isInsideSticky={false}
@@ -1119,9 +1100,10 @@ export default function Home() {
                   game={g + 1}
                 />
                 <div
-                  className="absolute flex items-stretch flex-col"
+                  className="scoreboard absolute left-0 right-0 flex items-stretch flex-col"
                   style={{
-                    inset: `${courtHeight + topLipHeight}px 0 ${-courtHeight + topLipHeight - 30}px 0`,
+                    top: `${courtHeight + topLipHeight}px`,
+                    bottom: `${-courtHeight + topLipHeight - 30}px`,
                   }}
                 >
                   <div
