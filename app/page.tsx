@@ -1360,8 +1360,9 @@ export default function Home() {
                     style={{ height: courtHeight }}
                   >
                     <div
-                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll"
+                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
                       style={{
+                        opacity: hasReachedBottom ? 0 : 1,
                         transform: `translate(-100%, -${topLipHeight - 17}px)`,
                         left: -topLipHeight + 19,
                         height: courtHeight + topLipHeight - 18,
@@ -1375,8 +1376,9 @@ export default function Home() {
                       />
                     </div>
                     <div
-                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll"
+                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
                       style={{
+                        opacity: hasReachedBottom ? 0 : 1,
                         transform: `translate(100%, -${topLipHeight - 17}px)`,
                         right: -topLipHeight + 19,
                         height: courtHeight + topLipHeight - 18,
