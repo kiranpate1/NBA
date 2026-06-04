@@ -91,6 +91,7 @@ h3.gameclock {
 h4 {
   font-family: "Geist Mono", monospace;
   font-size: 18px;
+  letter-spacing: -0.05em;
 }
 
 p {
@@ -120,6 +121,11 @@ small {
 
 .maincourt * {
   opacity: 0.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.splashcourt * {
+  stroke: #b1b1b1;
   vector-effect: non-scaling-stroke;
 }
 

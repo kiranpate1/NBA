@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import SplashCourt from "./components/SplashCourt";
 import Court from "./components/Court";
 import GameGrid from "./components/GameGrid";
 import GameCard from "./components/GameCard";
@@ -30,6 +31,7 @@ import Game5Spread from "./graphics/game5/Game5Spread";
 import Game6Spread from "./graphics/game6/Game6Spread";
 import Game7Spread from "./graphics/game7/Game7Spread";
 import BoxScore from "./components/BoxScore";
+import Highlight from "./components/Highlight";
 
 type CourtGraphicComponent = React.ComponentType;
 type SpreadGraphicComponent = React.ComponentType<{ spread: number }>;
@@ -79,6 +81,43 @@ type PlayerStats = {
 
 type TeamStats = Record<string, PlayerStats>;
 type TeamScore = { OKC: number; SAS: number };
+
+type HighlightInfo = {
+  team: "OKC" | "SAS";
+  player: {
+    name: string;
+    position: string;
+    number: number;
+    imageUrl: string;
+  };
+  play: string;
+  time: string;
+  quarter: string;
+  distance: string;
+  result: "made" | "miss" | "other";
+};
+
+type TeamRosterPlayer = {
+  name: string;
+  position: string;
+  number: number;
+  imageUrl: string;
+};
+
+type TeamKey = "OKC" | "SAS";
+
+type ScoredPlay = {
+  entry: PlayEntry;
+  absoluteSeconds: number;
+  before: TeamScore;
+  after: TeamScore;
+};
+
+type GameSegment = {
+  quarter: string;
+  startSeconds: number;
+  endSeconds: number;
+};
 
 const makeEmptyTeamScore = (): TeamScore => ({ OKC: 0, SAS: 0 });
 
@@ -251,10 +290,246 @@ const getQuarterAndTime = (
 
 const getDefaultGameSeconds = (otCount: number) => (48 + otCount * 5) * 60;
 
+const teamPlayersByName: Record<TeamKey, Map<string, TeamRosterPlayer>> = {
+  OKC: new Map(thunderPlayers.map((player) => [player.name, player])),
+  SAS: new Map(spursPlayers.map((player) => [player.name, player])),
+};
+
+const fallbackHighlight: HighlightInfo = {
+  team: "OKC",
+  player: {
+    name: "No Highlight",
+    position: "-",
+    number: 0,
+    imageUrl: "",
+  },
+  play: "No notable play recorded in this segment.",
+  time: "00:00",
+  quarter: "Q1",
+  distance: "-",
+  result: "other",
+};
+
+const getHighlightSegments = (otCount: number): GameSegment[] => {
+  const quarterDuration = 12 * 60;
+  const quarterChunk = quarterDuration / 4;
+  const overtimeDuration = 5 * 60;
+  const segments: GameSegment[] = [];
+
+  for (let quarter = 1; quarter <= 4; quarter += 1) {
+    const quarterStart = (quarter - 1) * quarterDuration;
+
+    for (let chunk = 0; chunk < 4; chunk += 1) {
+      const startSeconds = quarterStart + chunk * quarterChunk;
+      segments.push({
+        quarter: `Q${quarter}`,
+        startSeconds,
+        endSeconds: startSeconds + quarterChunk,
+      });
+    }
+  }
+
+  for (let ot = 1; ot <= otCount; ot += 1) {
+    const startSeconds = 48 * 60 + (ot - 1) * overtimeDuration;
+    segments.push({
+      quarter: `OT${ot}`,
+      startSeconds,
+      endSeconds: startSeconds + overtimeDuration,
+    });
+  }
+
+  return segments;
+};
+
+const getPlayDistance = (play: string): string => {
+  const distanceMatch = play.match(/(\d+(?:\.\d+)?)\s*ft\b/i);
+  return distanceMatch ? `${distanceMatch[1]} ft` : "-";
+};
+
+const buildScoredTimeline = (entries: PlayEntry[]): ScoredPlay[] => {
+  const sortedEntries = [...entries].sort(
+    (a, b) =>
+      getAbsoluteSeconds(a.quarter, a.time) -
+      getAbsoluteSeconds(b.quarter, b.time),
+  );
+
+  let runningScore: TeamScore = makeEmptyTeamScore();
+
+  return sortedEntries.map((entry) => {
+    const before = { ...runningScore };
+    runningScore = {
+      ...runningScore,
+      [entry.team]: runningScore[entry.team] + entry.points,
+    };
+
+    return {
+      entry,
+      absoluteSeconds: getAbsoluteSeconds(entry.quarter, entry.time),
+      before,
+      after: { ...runningScore },
+    };
+  });
+};
+
+const getHighlightPriorityScore = (play: ScoredPlay): number => {
+  const { entry, before, after } = play;
+  const team = entry.team;
+  const opponent: TeamKey = team === "OKC" ? "SAS" : "OKC";
+  const made = entry.result === "made";
+  const threePointMake = made && isThreePointPlay(entry.play);
+  const twoPointMake = made && entry.points === 2;
+
+  const beforeLead = before[team] - before[opponent];
+  const afterLead = after[team] - after[opponent];
+  const leadSwing = afterLead - beforeLead;
+  const favorableScoreChange = made && entry.points > 0 && leadSwing > 0;
+
+  let tier = 0;
+  if (favorableScoreChange) tier = 4;
+  else if (threePointMake) tier = 3;
+  else if (twoPointMake) tier = 2;
+  else if (made && entry.points > 0) tier = 1;
+
+  let detailScore = 0;
+  detailScore += Math.max(0, leadSwing) * 10;
+  detailScore += entry.points * 2;
+  if (threePointMake) detailScore += 7;
+  if (entry.quarter === "Q4" || entry.quarter.startsWith("OT")) {
+    detailScore += 1;
+  }
+
+  return tier * 1000 + detailScore;
+};
+
+const toHighlightInfo = (play: ScoredPlay): HighlightInfo => {
+  const { entry } = play;
+  const resolvedName = resolveRosterName(entry.team, entry.player);
+  const teamLookup = teamPlayersByName[entry.team];
+  const defaultPlayer =
+    entry.team === "OKC" ? thunderPlayers[0] : spursPlayers[0];
+  const rosterPlayer = resolvedName
+    ? (teamLookup.get(resolvedName) ?? defaultPlayer)
+    : defaultPlayer;
+
+  return {
+    team: entry.team,
+    player: {
+      name: resolvedName ?? entry.player ?? rosterPlayer.name,
+      position: rosterPlayer.position,
+      number: rosterPlayer.number,
+      imageUrl: rosterPlayer.imageUrl,
+    },
+    play: entry.play,
+    time: entry.time,
+    quarter: entry.quarter,
+    distance: getPlayDistance(entry.play),
+    result: entry.result,
+  };
+};
+
+const getHighlightsForGame = (
+  entries: PlayEntry[],
+  otCount: number,
+): HighlightInfo[] => {
+  if (entries.length === 0) return [];
+
+  const timeline = buildScoredTimeline(entries);
+  const segments = getHighlightSegments(otCount);
+
+  return segments.map((segment) => {
+    const candidates = timeline.filter(
+      (play) =>
+        play.absoluteSeconds >= segment.startSeconds &&
+        play.absoluteSeconds < segment.endSeconds,
+    );
+
+    if (candidates.length === 0) {
+      return {
+        ...fallbackHighlight,
+        quarter: segment.quarter,
+      };
+    }
+
+    let best = candidates[0];
+    let bestScore = getHighlightPriorityScore(best);
+
+    for (let i = 1; i < candidates.length; i += 1) {
+      const candidate = candidates[i];
+      const score = getHighlightPriorityScore(candidate);
+      const sameScore = score === bestScore;
+      const tiebreakByPoints = candidate.entry.points > best.entry.points;
+      const tiebreakByTime =
+        candidate.entry.points === best.entry.points &&
+        candidate.absoluteSeconds > best.absoluteSeconds;
+
+      if (
+        score > bestScore ||
+        (sameScore && (tiebreakByPoints || tiebreakByTime))
+      ) {
+        best = candidate;
+        bestScore = score;
+      }
+    }
+
+    return toHighlightInfo(best);
+  });
+};
+
+const getScoreAtSecond = (
+  entries: PlayEntry[],
+  upToSecond: number,
+): TeamScore => {
+  const score: TeamScore = { OKC: 0, SAS: 0 };
+  for (const entry of entries) {
+    const entrySeconds = getAbsoluteSeconds(entry.quarter, entry.time);
+    if (entrySeconds > upToSecond) break;
+    score[entry.team] += entry.points;
+  }
+  return score;
+};
+
+const getHighlightColumnSpan = (
+  team: TeamKey,
+  score: TeamScore,
+): [number, number] => {
+  const okcLead = score.OKC - score.SAS;
+  if (team === "OKC") {
+    if (okcLead >= 20) return [1, 3];
+    if (okcLead >= 10) return [2, 4];
+    return [3, 5];
+  } else {
+    const sasLead = score.SAS - score.OKC;
+    if (sasLead >= 20) return [9, 11];
+    if (sasLead >= 10) return [8, 10];
+    return [7, 9];
+  }
+};
+
+const getSegmentIndexForSecond = (
+  segments: GameSegment[],
+  currentSecond: number,
+): number => {
+  if (segments.length === 0) return 0;
+
+  for (let i = 0; i < segments.length; i += 1) {
+    const segment = segments[i];
+    if (
+      currentSecond >= segment.startSeconds &&
+      currentSecond < segment.endSeconds
+    ) {
+      return i;
+    }
+  }
+
+  if (currentSecond < segments[0].startSeconds) return 0;
+  return segments.length - 1;
+};
+
 export default function Home() {
   const courtHeight = 160;
   const gameScroll = 300; // in vh, regulation 48 minutes
   const topLipHeight = 80;
+  const splashRef = useRef<HTMLDivElement | null>(null);
   const playBoundaryRef = useRef<HTMLDivElement | null>(null);
   const OKCPlayRef = useRef<HTMLDivElement | null>(null);
   const SASPlayRef = useRef<HTMLDivElement | null>(null);
@@ -299,6 +574,7 @@ export default function Home() {
     games.map((game) => getDefaultGameSeconds(game.ot)),
   );
   const [activeGameIndex, setActiveGameIndex] = useState(0);
+  const [isInsideSplash, setIsInsideSplash] = useState(true);
   const [hasReachedBottom, setHasReachedBottom] = useState(false);
   const [activeCourtUrl, setActiveCourtUrl] = useState<string | null>(null);
   const [displayedCourtUrl, setDisplayedCourtUrl] = useState<string | null>(
@@ -623,6 +899,9 @@ export default function Home() {
       const scrollEl = activeEntry.el;
       const rect = scrollEl.getBoundingClientRect();
       const scrolledPx = boundaryTop - rect.top;
+      const splashBottom = splashRef.current?.getBoundingClientRect().bottom;
+      const isInsideSplashNow =
+        typeof splashBottom === "number" && splashBottom > boundaryTop;
       const totalSeconds =
         gameSecondsByGame[activeIndex] ??
         getDefaultGameSeconds(games[activeIndex]?.ot ?? 0);
@@ -636,6 +915,9 @@ export default function Home() {
       }
 
       setActiveGameIndex((prev) => (prev === activeIndex ? prev : activeIndex));
+      setIsInsideSplash((prev) =>
+        prev === isInsideSplashNow ? prev : isInsideSplashNow,
+      );
       setHasReachedBottom((prev) =>
         prev === isSeriesBottom ? prev : isSeriesBottom,
       );
@@ -801,21 +1083,38 @@ export default function Home() {
     };
   }, [courtHeight]);
 
+  const splashTransition = "0.2s ease-in-out";
+  const highlightSegmentsByGame = useMemo(
+    () => games.map((game) => getHighlightSegments(game.ot)),
+    [],
+  );
+  const highlightsByGame = useMemo(
+    () =>
+      playsByGame.map((entries, index) =>
+        getHighlightsForGame(entries, games[index]?.ot ?? 0),
+      ),
+    [playsByGame],
+  );
+
   return (
     <main className="">
       <div
-        className="relative z-4 w-full bg-(--background)"
-        style={{ height: `100dvh`, padding: topLipHeight - 17 }}
+        className="relative z-4 w-full bg-(--background) p-6 xl:p-[63px_63px_163px_63px] transition-[padding] duration-300 ease-in-out"
+        style={{
+          height: `100dvh`,
+        }}
+        ref={splashRef}
       >
-        <div className="w-full h-full grid grid-cols-2 border border-(--stroke)">
+        <div className="relative w-full h-full grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 border border-(--stroke)">
+          <SplashCourt />
           {/* use text effect from your codepen, both animating from center */}
           <div className="place-self-center flex flex-col items-center text-(--okc)">
             <p>Oklahoma City Thunder</p>
             <h1>OKC</h1>
             <small>64-18</small>
           </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <h3>VS.</h3>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-0.5">
+            <h3>VS</h3>
           </div>
           <div className="place-self-center flex flex-col items-center text-(--sas)">
             <p>San Antonio Spurs</p>
@@ -828,15 +1127,33 @@ export default function Home() {
         {/* games nav */}
         <div
           className="absolute z-4 pointer-events-none"
-          style={{ inset: `-${topLipHeight}px 0 0 0` }}
+          style={{
+            transition: splashTransition,
+            inset: `-${isInsideSplash ? 116 : topLipHeight}px 0 0 0`,
+          }}
         >
           <div className="sticky z-2 top-0 w-full h-0">
             <div
-              className="absolute z-10 top-0 xl:top-4 left-1/2 -translate-x-1/2 w-full max-w-[975px] max-h-10 xl:max-h-none grid grid-cols-7 border-[0.5px] border-(--stroke) bg-(--background) duration-200 ease-in-out pointer-events-auto"
+              className="absolute z-10 top-0 xl:top-4 left-1/2 -translate-x-1/2 w-full max-h-10 xl:max-h-none xl:opacity-100! grid border-[0.5px] border-(--stroke) bg-(--background) pointer-events-auto"
               style={{
-                height: topLipHeight - 17,
+                transition: splashTransition,
+                gridTemplateColumns: isInsideSplash
+                  ? "1fr 1fr 1fr 1fr 1fr 1fr 0.5fr"
+                  : "repeat(7, 1fr)",
+                maxWidth: isInsideSplash ? "100%" : "975px",
+                height: isInsideSplash ? 100 : topLipHeight - 17,
+                opacity: isInsideSplash ? 0 : 1,
               }}
             >
+              <h3
+                className="absolute top-0 left-2 -translate-y-full text-(--stroke)"
+                style={{
+                  transition: splashTransition,
+                  opacity: isInsideSplash ? 1 : 0,
+                }}
+              >
+                May <span style={{ opacity: 0.5 }}>2026</span>
+              </h3>
               {games.map((game, i) => {
                 const progress = progressByGame[i] ?? 0;
                 const isActiveGame = progress > 0 && progress < 1;
@@ -850,45 +1167,98 @@ export default function Home() {
                 const navBackgroundColor = isActiveGame
                   ? `color-mix(in srgb, var(--background) 88%, ${progressColor} 12%)`
                   : "var(--background)";
+                let dateLabel = 18;
+                dateLabel += i * 2;
 
                 return (
-                  <button
-                    type="button"
-                    className="flex flex-col items-stretch border-[0.5px] border-(--stroke) overflow-hidden cursor-pointer transition-colors duration-150"
+                  <div
+                    className="border-[0.5px] border-(--stroke) grid"
+                    style={{
+                      transition: splashTransition,
+                      gridTemplateColumns:
+                        i < 6
+                          ? isInsideSplash
+                            ? "1fr 1fr"
+                            : "1fr 0fr"
+                          : "1fr",
+                    }}
                     key={i}
-                    onClick={() => scrollToGameStart(i)}
-                    style={{ backgroundColor: navBackgroundColor }}
                   >
-                    <div className="h-2 xl:h-3 overflow-hidden p-0 xl:p-0.5">
-                      <div
-                        className="h-full"
+                    <button
+                      type="button"
+                      className="relative flex flex-col items-stretch overflow-hidden cursor-pointer transition-colors duration-150"
+                      onClick={() => scrollToGameStart(i)}
+                      style={{ backgroundColor: navBackgroundColor }}
+                    >
+                      <small
+                        className="absolute top-1 left-1"
                         style={{
-                          width: "100%",
-                          transformOrigin: "left center",
-                          transform: `scaleX(${Math.min(
-                            1,
-                            Math.max(0, progressByGame[i] ?? 0),
-                          )})`,
-                          backgroundColor: progressColor,
+                          opacity: isInsideSplash ? 1 : 0,
                         }}
-                      ></div>
-                    </div>
-                    <div className="flex-1 flex items-center justify-center px-4">
-                      <img
-                        src="/thunder-logo.svg"
-                        alt="OKC logo"
-                        className="hidden sm:block flex-1 h-4"
-                        style={{ opacity: score.OKC > score.SAS ? 1 : 0.15 }}
-                      />
-                      <h4 className="text-(--stroke)">{i + 1}</h4>
-                      <img
-                        src="/spurs-logo.svg"
-                        alt="SAS logo"
-                        className="hidden sm:block flex-1 h-4"
-                        style={{ opacity: score.SAS > score.OKC ? 1 : 0.15 }}
-                      />
-                    </div>
-                  </button>
+                      >
+                        {dateLabel}
+                      </small>
+                      <div className="h-2 xl:h-3 overflow-hidden p-0 xl:p-0.5">
+                        <div
+                          className="h-full"
+                          style={{
+                            width: "100%",
+                            transformOrigin: "left center",
+                            transform: `scaleX(${Math.min(
+                              1,
+                              Math.max(0, progressByGame[i] ?? 0),
+                            )})`,
+                            backgroundColor: progressColor,
+                          }}
+                        ></div>
+                      </div>
+                      <div className="flex-1 flex items-center justify-center px-4">
+                        <img
+                          src="/thunder-logo.svg"
+                          alt="OKC logo"
+                          className="hidden sm:block flex-1 h-4"
+                          style={{
+                            opacity: isInsideSplash
+                              ? "1"
+                              : score.OKC > score.SAS
+                                ? 1
+                                : 0.15,
+                          }}
+                        />
+                        <p
+                          className="text-(--stroke)"
+                          style={{
+                            transition: splashTransition,
+                            transform: isInsideSplash
+                              ? "scale(0.8)"
+                              : "scale(1.25)",
+                          }}
+                        >
+                          {isInsideSplash ? "7pm" : i + 1}
+                        </p>
+                        <img
+                          src="/spurs-logo.svg"
+                          alt="SAS logo"
+                          className="hidden sm:block flex-1 h-4"
+                          style={{
+                            opacity: isInsideSplash
+                              ? "1"
+                              : score.SAS > score.OKC
+                                ? 1
+                                : 0.15,
+                          }}
+                        />
+                      </div>
+                    </button>
+                    {i < 6 && (
+                      <div className="relative overflow-hidden">
+                        <small className="absolute top-1 left-1">
+                          {dateLabel + 1}
+                        </small>
+                        <div className="w-full h-full border-l border-(--stroke)"></div>
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -1075,6 +1445,36 @@ export default function Home() {
             const gameVisual = gameVisuals[g] ?? gameVisuals[0];
             const SpreadGraphic = gameVisual.spread;
             const gameScrollRef = gameScrollRefs[g] ?? gameScrollRefs[0];
+            const gameHighlights = highlightsByGame[g] ?? [];
+            const gameSegments = highlightSegmentsByGame[g] ?? [];
+            const gameSeconds =
+              gameSecondsByGame[g] ?? getDefaultGameSeconds(game.ot);
+            const gameProgress = Math.min(
+              1,
+              Math.max(0, progressByGame[g] ?? 0),
+            );
+            const currentSecond = Math.floor(gameProgress * gameSeconds);
+            const activeSegmentIndex = getSegmentIndexForSecond(
+              gameSegments,
+              currentSecond,
+            );
+            const activeSegment = gameSegments[activeSegmentIndex];
+            const activeHighlight = gameHighlights[activeSegmentIndex] ?? {
+              ...fallbackHighlight,
+              quarter: activeSegment?.quarter ?? "Q1",
+            };
+            const highlightGridRow = Math.max(1, activeSegmentIndex + 1);
+            const plays = playsByGame[g] ?? [];
+            const highlightSecond = getAbsoluteSeconds(
+              activeHighlight.quarter,
+              activeHighlight.time,
+            );
+            const scoreAtHighlight = getScoreAtSecond(plays, highlightSecond);
+            const [colStart, colEnd] = getHighlightColumnSpan(
+              activeHighlight.team,
+              scoreAtHighlight,
+            );
+            const highlightGridArea = `${highlightGridRow} / ${colStart} / ${highlightGridRow} / ${colEnd}`;
 
             return (
               <div className="relative pointer-events-none" key={g}>
@@ -1090,9 +1490,58 @@ export default function Home() {
                   }}
                   ref={gameScrollRef}
                 >
+                  <div
+                    className="sticky z-5 w-full h-0 grid grid-cols-10 pointer-events-auto opacity-70"
+                    style={{
+                      top: `calc(100dvh - ${topLipHeight + courtHeight + 17}px)`,
+                    }}
+                  >
+                    <small className="[grid-area:1/2/1/2] place-self-end p-0.75 -translate-y-full">
+                      30
+                    </small>
+                    <small className="[grid-area:1/3/1/3] place-self-end p-0.75 -translate-y-full">
+                      20
+                    </small>
+                    <small className="[grid-area:1/4/1/4] place-self-end p-0.75 -translate-y-full">
+                      10
+                    </small>
+                    <small className="[grid-area:1/5/1/5] place-self-end p-0.75 -translate-y-full">
+                      0
+                    </small>
+                    <small className="[grid-area:1/6/1/6] place-self-start p-0.75 -translate-y-full">
+                      0
+                    </small>
+                    <small className="[grid-area:1/7/1/7] place-self-start p-0.75 -translate-y-full">
+                      10
+                    </small>
+                    <small className="[grid-area:1/8/1/8] place-self-start p-0.75 -translate-y-full">
+                      20
+                    </small>
+                    <small className="[grid-area:1/9/1/9] place-self-start p-0.75 -translate-y-full">
+                      30
+                    </small>
+                  </div>
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-(--stroke)"></div>
                   <GameGrid isInsideSticky={false} ot={game.ot} />
                   <SpreadGraphic spread={game.spread} />
+                  <div
+                    className="absolute inset-0 grid grid-cols-10"
+                    style={{
+                      gridTemplateRows: `1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ${game.ot > 0 ? Array.from({ length: game.ot }, (_, i) => `${5 / 3}fr`).join(" ") : "0fr"}`,
+                    }}
+                  >
+                    <div
+                      className="relative -translate-y-full min-w-50"
+                      style={{
+                        justifySelf:
+                          activeHighlight.team === "OKC" ? "end" : "start",
+                        gridArea: highlightGridArea,
+                        maxHeight: `${gameScroll / 16}vh`,
+                      }}
+                    >
+                      <Highlight info={activeHighlight} />
+                    </div>
+                  </div>
                 </div>
                 <GameRecap
                   isInsideSticky={false}

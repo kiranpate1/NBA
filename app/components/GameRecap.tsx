@@ -24,7 +24,7 @@ export default function GameRecap({ isInsideSticky, height, game }: props) {
             <PlayerCard info={gameInfo.okcPlayer} />
           </div>
           <div className="[grid-area:1/2/1/6] lg:[grid-area:1/2/1/3] flex justify-center">
-            <div className="w-full max-w-[150px] lg:max-w-none h-full border border-(--stroke) rounded-sm flex flex-col items-stretch gap-1 overflow-hidden">
+            <div className="w-full max-w-[150px] lg:max-w-none h-full border border-(--stroke) rounded-xs flex flex-col items-stretch gap-1 overflow-hidden">
               <div
                 className="flex-1 border-b border-(--stroke)"
                 style={{
