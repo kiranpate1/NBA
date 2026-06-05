@@ -1143,6 +1143,7 @@ export default function Home() {
                 maxWidth: isInsideSplash ? "100%" : "975px",
                 height: isInsideSplash ? 100 : topLipHeight - 17,
                 opacity: isInsideSplash ? 0 : 1,
+                // maxHeight: hasReachedBottom ? "none" : "",
               }}
             >
               <h3
@@ -1355,7 +1356,7 @@ export default function Home() {
                     style={{ height: topLipHeight }}
                   ></div>
                   <div
-                    className="relative border border-(--stroke) bg-(--background)"
+                    className="relative border border-(--stroke) bg-(--background) max-h-[calc(100vw*50/94)]"
                     ref={courtHeightDynamicRef}
                     style={{ height: courtHeight }}
                   >
@@ -1527,7 +1528,7 @@ export default function Home() {
                   <GameGrid isInsideSticky={false} ot={game.ot} />
                   <SpreadGraphic spread={game.spread} />
                   <div
-                    className="absolute inset-0 grid grid-cols-10"
+                    className="absolute inset-0 grid grid-cols-10 opacity-0 lg:opacity-100"
                     style={{
                       gridTemplateRows: `1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ${game.ot > 0 ? Array.from({ length: game.ot }, (_, i) => `${5 / 3}fr`).join(" ") : "0fr"}`,
                     }}
@@ -1579,9 +1580,77 @@ export default function Home() {
       </div>
       <footer
         ref={footerRef}
-        className="w-full bg-gray-200"
+        className="relative z-6 w-full min-h-screen lg:min-h-[550px]"
         style={{ height: `calc(100vh - ${courtHeight + topLipHeight + 14}px)` }}
-      ></footer>
+      >
+        <div className="absolute inset-[calc(53vw+140px)_0_auto_0] sm:inset-[calc(50vw-160px)_0_auto_0] lg:inset-[-254px_0_auto_0] flex items-center justify-between">
+          <div className="flex flex-col xl:flex-row items-center gap-0 xl:gap-8 p-[16px_32px_0_32px] lg:p-2 xl:p-[32px_40px] pointer-events-auto">
+            <h2 className="opacity-50">OKC</h2>
+            <h2 className="text-(--okc) text-right">3</h2>
+          </div>
+          <div className="flex flex-col-reverse xl:flex-row items-center gap-0 xl:gap-8 p-[16px_32px_0_32px] lg:p-2 xl:p-[32px_40px] pointer-events-auto">
+            <h2 className="text-(--sas) text-left">4</h2>
+            <h2 className="opacity-50">SAS</h2>
+          </div>
+        </div>
+        <div className="absolute top-[calc(53vw-160px)] md:top-50 left-1/2 -translate-x-1/2 w-[calc(100dvw-32px)] sm:w-75 h-75">
+          <div className="w-full h-full border border-(--stroke) rounded-xs flex flex-col items-stretch justify-start gap-1 overflow-hidden">
+            <div
+              className="h-full flex-1 border-b border-(--stroke)"
+              style={{
+                backgroundImage: `url(/mvp.png)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            ></div>
+            <div className="flex flex-col items-start gap-1 px-2 pb-1.5">
+              <h4>Most Valuable Player</h4>
+              <p className="smaller text-pretty">
+                V. Wembanyama &ensp;
+                <span className="opacity-60">
+                  27.3 PTS, 10.9 REB, 3.1 AST, 1.4 STL, 2.7 BLK, 48.1 FG%
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute inset-[calc(53vw-175px)_16px_16px_16px] md:inset-[-16px_16px_16px_16px] border-l border-r border-b border-(--stroke)">
+          <div className="absolute inset-[auto_0_0_0] p-4 flex items-center justify-between">
+            <small>
+              by{" "}
+              <a
+                className="opacity-50 hover:opacity-100 hover:underline cursor-pointer"
+                href="https://kiranpa.tel/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kiran Patel
+              </a>
+            </small>
+            <small>
+              <a
+                className="opacity-50 hover:opacity-100 hover:underline cursor-pointer"
+                href="https://www.nba.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NBA 2026
+              </a>
+            </small>
+            <small>
+              art from{" "}
+              <a
+                className="opacity-50 hover:opacity-100 hover:underline cursor-pointer"
+                href="https://www.statmuse.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Stat Muse
+              </a>
+            </small>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }

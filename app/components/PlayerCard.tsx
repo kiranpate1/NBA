@@ -18,7 +18,7 @@ export default function PlayerCard({ info }: props) {
         }}
       ></div>
       <div className="w-full sm:w-auto flex flex-col items-center sm:items-start gap-1 px-2 py-1.5">
-        <small className="text-(--stroke)text-center sm:text-left ">
+        <small className="text-(--stroke)text-center sm:text-left">
           Top performer
         </small>
         <p className="smaller text-center sm:text-left text-pretty">
