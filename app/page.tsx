@@ -1165,10 +1165,10 @@ export default function Home() {
     if (x < 0) x = 0;
     if (x > length) x = length;
 
-    let normalizedX = x / length;
-    let normalizedY = Math.pow(normalizedX, 5);
+    const normalizedX = x / length;
+    const normalizedY = Math.pow(normalizedX, 5);
 
-    let y = normalizedY * 500;
+    const y = normalizedY * 500;
     return y;
   }
 
