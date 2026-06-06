@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,9 +8,39 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+const geistMono = localFont({
+  src: [
+    {
+      path: "../public/fonts/Geist_Mono/GeistMono-VariableFont_wght.ttf",
+      weight: "400",
+      style: "normal",
+    },
+
+    {
+      path: "../public/fonts/Geist_Mono/GeistMono-Italic-VariableFont_wght.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+});
+
+const bebasNeue = localFont({
+  src: [
+    {
+      path: "../public/fonts/Bebas_Neue/BebasNeue-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-bebas-neue",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} antialiased`}
       >
         {children}
       </body>

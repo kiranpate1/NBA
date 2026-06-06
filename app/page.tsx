@@ -1096,8 +1096,123 @@ export default function Home() {
     [playsByGame],
   );
 
+  const okcTitleRef = useRef<HTMLHeadingElement | null>(null);
+  const sasTitleRef = useRef<HTMLHeadingElement | null>(null);
+
+  useEffect(() => {
+    const okcTitleEl = okcTitleRef.current;
+    const sasTitleEl = sasTitleRef.current;
+    if (!okcTitleEl || !sasTitleEl) return;
+
+    const titleElms = [okcTitleEl, sasTitleEl];
+
+    titleElms.forEach((el) => {
+      el.style.opacity = "1";
+      const titleLetters = el.textContent || "";
+      let letters: string[] = [];
+
+      el.innerHTML = "";
+
+      letters = titleLetters.split("");
+      const widths: number[] = [];
+
+      console.log(letters);
+
+      letters.forEach((letter, n) => {
+        const span = document.createElement("span") as HTMLSpanElement;
+        const div = document.createElement("div") as HTMLDivElement;
+        if (letter == " ") {
+          div.innerHTML = "&nbsp";
+        } else {
+          div.innerHTML = letter;
+        }
+        span.style.display = "inline-block";
+        span.style.lineHeight = "1";
+        span.appendChild(div);
+        el.appendChild(span);
+        widths.push(div.getBoundingClientRect().width);
+
+        // okcTitleEl.style.opacity = '1'
+        div.style.overflow = "hidden";
+        div.style.width = "0px";
+        div.style.transform = `skewX(${el == okcTitleEl ? -75 : 75}deg) scaleX(${el == okcTitleEl ? (letters.length - n) * 2 : n * 2})`;
+        div.style.transition = `${el == okcTitleEl ? 0.2 + n / 15 : 0.2 + (letters.length - n) / 15}s ease-out`;
+      });
+
+      const allSpans = el.querySelectorAll(
+        "h1 span div",
+      ) as NodeListOf<HTMLDivElement>;
+
+      setTimeout(function () {
+        allSpans.forEach((items, n) => {
+          const delay =
+            el == okcTitleEl
+              ? 50 + easeRegular(n, letters.length - 1)
+              : 50 + easeRegular(n, letters.length);
+          const elNumber = el == okcTitleEl ? n : 2 - n;
+
+          setTimeout(function () {
+            // okcTitleEl.style.opacity = '0.7'
+            allSpans[elNumber].style.width = `${widths[elNumber]}px`;
+            allSpans[elNumber].style.transform = "skewX(0deg) scaleX(1)";
+          }, delay);
+        });
+      }, 500);
+    });
+  }, []);
+
+  function easeInQuint(x: number, length: number) {
+    if (x < 0) x = 0;
+    if (x > length) x = length;
+
+    let normalizedX = x / length;
+    let normalizedY = Math.pow(normalizedX, 5);
+
+    let y = normalizedY * 500;
+    return y;
+  }
+
+  function easeRegular(x: number, length: number) {
+    if (x < 0) x = 0;
+    if (x > length) x = length;
+
+    let normalizedX = x / length;
+    let normalizedY =
+      normalizedX < 0.5
+        ? 4 * Math.pow(normalizedX, 3)
+        : 1 - Math.pow(-2 * normalizedX + 2, 3) / 2;
+
+    let y = normalizedY * 200;
+    return y;
+  }
+
   return (
-    <main className="">
+    <main>
+      <div
+        id="loader"
+        className="fixed z-200 inset-0 p-6 xl:p-[63px_63px_163px_63px] pointer-events-none duration-300 ease-in-out"
+      >
+        <div className="w-full h-full flex lg:flex-col items-center justify-center">
+          <div className="w-15/50 lg:w-auto lg:h-15/50">
+            <svg
+              height="100%"
+              viewBox="0 0 160 160"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="80"
+                cy="80"
+                r="59.5"
+                transform="rotate(-90 80 80)"
+                strokeWidth="10"
+                stroke="var(--sas)"
+                // vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
       <div
         className="relative z-4 w-full bg-(--background) p-6 xl:p-[63px_63px_163px_63px] transition-[padding] duration-300 ease-in-out"
         style={{
@@ -1110,7 +1225,9 @@ export default function Home() {
           {/* use text effect from your codepen, both animating from center */}
           <div className="place-self-center flex flex-col items-center text-(--okc)">
             <p>Oklahoma City Thunder</p>
-            <h1>OKC</h1>
+            <h1 ref={okcTitleRef} className="opacity-0">
+              OKC
+            </h1>
             <small>64-18</small>
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-0.5">
@@ -1118,7 +1235,9 @@ export default function Home() {
           </div>
           <div className="place-self-center flex flex-col items-center text-(--sas)">
             <p>San Antonio Spurs</p>
-            <h1>SAS</h1>
+            <h1 ref={sasTitleRef} className="opacity-0">
+              SAS
+            </h1>
             <small>62-20</small>
           </div>
         </div>
@@ -1187,7 +1306,7 @@ export default function Home() {
                   >
                     <button
                       type="button"
-                      className="relative flex flex-col items-stretch overflow-hidden cursor-pointer transition-colors duration-150"
+                      className="relative flex flex-col items-stretch hover:opacity-60 overflow-hidden cursor-pointer transition-colors duration-150"
                       onClick={() => scrollToGameStart(i)}
                       style={{ backgroundColor: navBackgroundColor }}
                     >

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap"); */
 
 @import "tailwindcss";
 
@@ -48,7 +48,7 @@ small {
 h1,
 h2,
 h3 {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: var(--font-bebas-neue, "Bebas Neue", system-ui, sans-serif);
   font-weight: 400;
   font-style: normal;
   line-height: 115%;
@@ -56,6 +56,7 @@ h3 {
 
 h1 {
   font-size: 148px;
+  line-height: 0.5;
 }
 
 h2 {
@@ -82,14 +83,14 @@ h3 {
 }
 
 h3.gameclock {
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono), monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 28px;
 }
 
 h4 {
-  font-family: "Geist Mono", monospace;
+  font-family: var(--font-mono), monospace;
   font-size: 18px;
   letter-spacing: -0.05em;
 }
@@ -149,4 +150,53 @@ small {
 .court g path {
   stroke-width: 2px;
   fill: rgba(255, 255, 255, 0.75);
+}
+
+#loader {
+  background: var(--background);
+  animation: fadeOut 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    background: transparent;
+  }
+}
+
+#loader svg circle {
+  opacity: 1;
+  stroke-dasharray: 375px;
+  stroke-dashoffset: 375px;
+  stroke: var(--sas);
+  animation: dash 1.5s ease-in-out forwards;
+}
+
+@keyframes dash {
+  0% {
+    opacity: 1;
+    stroke-dashoffset: 375px;
+    stroke: var(--sas);
+  }
+  80% {
+    opacity: 1;
+    stroke-dashoffset: 0px;
+    stroke: var(--okc);
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0px;
+    stroke: var(--okc);
+  }
+}
+
+.splashcourt path {
+  stroke-dasharray: 1500px;
+  stroke-dashoffset: 1500px;
+  animation: draw 2s ease-out 1s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0px;
+  }
 }
