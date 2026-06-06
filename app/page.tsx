@@ -1161,28 +1161,17 @@ export default function Home() {
     });
   }, []);
 
-  function easeInQuint(x: number, length: number) {
-    if (x < 0) x = 0;
-    if (x > length) x = length;
-
-    const normalizedX = x / length;
-    const normalizedY = Math.pow(normalizedX, 5);
-
-    const y = normalizedY * 500;
-    return y;
-  }
-
   function easeRegular(x: number, length: number) {
     if (x < 0) x = 0;
     if (x > length) x = length;
 
-    let normalizedX = x / length;
-    let normalizedY =
+    const normalizedX = x / length;
+    const normalizedY =
       normalizedX < 0.5
         ? 4 * Math.pow(normalizedX, 3)
         : 1 - Math.pow(-2 * normalizedX + 2, 3) / 2;
 
-    let y = normalizedY * 200;
+    const y = normalizedY * 200;
     return y;
   }
 
