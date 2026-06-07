@@ -83,20 +83,20 @@ h3 {
 }
 
 h3.gameclock {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-mono, "Geist Mono"), monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 28px;
 }
 
 h4 {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-mono, "Geist Mono"), monospace;
   font-size: 18px;
   letter-spacing: -0.05em;
 }
 
 p {
-  font-family: var(--font-sans), sans-serif;
+  font-family: var(--font-sans, "Geist Sans"), sans-serif;
   font-size: 14px;
 }
 p.smaller {
@@ -105,7 +105,7 @@ p.smaller {
 
 small {
   display: block;
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-mono, "Geist Mono"), monospace;
   font-size: 10px;
   line-height: 100%;
 }

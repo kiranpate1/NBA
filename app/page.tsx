@@ -1424,6 +1424,34 @@ export default function Home() {
               <div className="absolute z-10 inset-[0_0_auto_0] h-4 bg-(--background)"></div>
               <div className="absolute z-10 inset-[auto_0_0_0] h-4 bg-(--background)"></div>
               <div
+                className="absolute top-9.5 xl:top-auto xl:bottom-4 left-4 xl:left-1/2 xl:-translate-x-155 w-[calc(50dvw-15px)] xl:w-102 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
+                style={{
+                  opacity: hasReachedBottom ? 0 : 1,
+                  height: courtHeight + topLipHeight - 18,
+                  pointerEvents: hasReachedBottom ? "none" : "auto",
+                }}
+              >
+                <BoxScore
+                  team="OKC"
+                  players={thunderPlayers}
+                  boxStats={boxStats}
+                />
+              </div>
+              <div
+                className="absolute top-9.5 xl:top-auto xl:bottom-4 right-4 xl:right-1/2 xl:translate-x-155 w-[calc(50dvw-15px)] xl:w-102 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
+                style={{
+                  opacity: hasReachedBottom ? 0 : 1,
+                  height: courtHeight + topLipHeight - 18,
+                  pointerEvents: hasReachedBottom ? "none" : "auto",
+                }}
+              >
+                <BoxScore
+                  team="SAS"
+                  players={spursPlayers}
+                  boxStats={boxStats}
+                />
+              </div>
+              <div
                 className="absolute z-10 left-0 right-0 h-0 px-4 pb-4"
                 style={{ bottom: courtHeight + topLipHeight }}
               >
@@ -1468,38 +1496,6 @@ export default function Home() {
                     ref={courtHeightDynamicRef}
                     style={{ height: courtHeight }}
                   >
-                    <div
-                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
-                      style={{
-                        opacity: hasReachedBottom ? 0 : 1,
-                        transform: `translate(-100%, -${topLipHeight - 17}px)`,
-                        left: -topLipHeight + 19,
-                        height: courtHeight + topLipHeight - 18,
-                        pointerEvents: hasReachedBottom ? "none" : "auto",
-                      }}
-                    >
-                      <BoxScore
-                        team="OKC"
-                        players={thunderPlayers}
-                        boxStats={boxStats}
-                      />
-                    </div>
-                    <div
-                      className="absolute bottom-[calc(100vh-119px)] xl:bottom-auto xl:top-0 w-[calc(50dvw+1px)] sm:w-[calc(50dvw-16px)] max-h-44 lg:max-h-none xl:w-102 -translate-x-52.5 xl:translate-x-0 translate-y-full xl:translate-y-0 border border-(--stroke) bg-(--background) overflow-x-scroll overflow-y-scroll duration-200"
-                      style={{
-                        opacity: hasReachedBottom ? 0 : 1,
-                        transform: `translate(100%, -${topLipHeight - 17}px)`,
-                        right: -topLipHeight + 19,
-                        height: courtHeight + topLipHeight - 18,
-                        pointerEvents: hasReachedBottom ? "none" : "auto",
-                      }}
-                    >
-                      <BoxScore
-                        team="SAS"
-                        players={spursPlayers}
-                        boxStats={boxStats}
-                      />
-                    </div>
                     <div className="absolute z-1 inset-0 pointer-events-auto">
                       <div
                         className="sas_courts absolute top-0 right-0 w-50/94 flex justify-center"
