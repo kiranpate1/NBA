@@ -1420,7 +1420,7 @@ export default function Home() {
           </div>
           {/* court, play-by-play, boxscores */}
           <div className="sticky top-[100dvh] w-full h-0 flex items-end justify-stretch pointer-events-none">
-            <div className="relative w-full h-screen p-4">
+            <div className="relative w-full h-dvh p-4">
               <div className="absolute z-10 inset-[0_0_auto_0] h-4 bg-(--background)"></div>
               <div className="absolute z-10 inset-[auto_0_0_0] h-4 bg-(--background)"></div>
               <div
